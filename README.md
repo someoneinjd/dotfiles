@@ -18,8 +18,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # 还需修改.zshrc启用插件，具体请参考链接
 ```
-参考链接：[ohmyzsh](https://ohmyz.sh/#install)\\
-          [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)\\
+参考链接：[ohmyzsh](https://ohmyz.sh/#install)  
+          [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)  
           [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
 ## 字体配置
 ```sh
@@ -34,8 +34,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 mv arch-config/.vimrc  ~/ 
 vim -c PlugInstall
 ```
-参考链接：[vim-plug](https://github.com/junegunn/vim-plug)\\
-          [vim基本配置](http://www.ruanyifeng.com/blog/2018/09/vimrc.html)\\
+参考链接：[vim-plug](https://github.com/junegunn/vim-plug)  
+          [vim基本配置](http://www.ruanyifeng.com/blog/2018/09/vimrc.html)  
           [coc.nvim](https://github.com/neoclide/coc.nvim)
 ## 输入法配置
 ```sh
@@ -48,8 +48,8 @@ yay -S fcitx5-pinyin-zhwiki-rime # 词库
 yay -S fcitx5-material-color     # 皮肤
 mv arch-config/classicui.conf ~/.config/fcitx5/conf/ # 主题配置文件
 ```
-参考链接：[fcitx5](https://wiki.archlinux.org/index.php/Fcitx5)\\
-          [四叶草输入方案](https://github.com/fkxxyz/rime-cloverpinyin)\\
+参考链接：[fcitx5](https://wiki.archlinux.org/index.php/Fcitx5)  
+          [四叶草输入方案](https://github.com/fkxxyz/rime-cloverpinyin)  
           [皮肤配置](https://github.com/hosxy/Fcitx5-Material-Color)
 ## 触摸板配置
 ```sh
