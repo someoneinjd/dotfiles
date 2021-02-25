@@ -24,7 +24,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ## 字体配置
 ```sh
 yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nerd-fonts-fira-code
-sudo mv arch-config/fonts.conf /etc/fonts/
+mv arch-config/fonts.conf ~/.config/fontconfig/
 ```
 参考链接：[ArchWiki](https://wiki.archlinux.org/index.php/Font_configuration)
 ## vim配置
