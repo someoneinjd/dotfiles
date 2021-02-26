@@ -3,6 +3,5 @@ export LANGUAGE=zh_CN:en_US
 
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
-export GLFW_IM_MODULE=ibus # 为了在kitty中使用fcitx5,
-# 参考链接：https://github.com/kovidgoyal/kitty/issues/469#issuecomment-778814173 
+export GLFW_IM_MODULE=ibus 
 export XMODIFIERS="@im=fcitx5"
