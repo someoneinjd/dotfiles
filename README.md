@@ -57,3 +57,25 @@ mv arch-config/classicui.conf ~/.config/fcitx5/conf/ # 主题配置文件
 sudo mv arch-config/30-touchpad.conf /etc/X11/xorg.conf.d/
 ```
 参考链接：[libinput](https://wiki.archlinux.org/index.php/Libinput)
+## 关于配置文件的一些说明
+### .zshrc
+使用了oh-my-zsh，配置主题为ys
+### .xprofile
+```sh
+# 配置中文环境变量
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US
+
+
+# 配置fcitx5环境变量
+export GTK_IM_MODULE=fcitx5
+export QT_IM_MODULE=fcitx5
+export GLFW_IM_MODULE=ibus # 为了在kitty中使用fcitx5， 参考以下链接
+# https://github.com/kovidgoyal/kitty/issues/469#issuecomment-778814173
+export XMODIFIERS="@im=fcitx5"
+```
+
+
+
+
+
