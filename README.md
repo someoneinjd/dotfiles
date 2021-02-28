@@ -27,16 +27,16 @@ yay -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra nerd-fonts-fi
 mv arch-config/fonts.conf ~/.config/fontconfig/
 ```
 参考链接：[ArchWiki](https://wiki.archlinux.org/index.php/Font_configuration)
-## vim配置
+## neovim配置
 ```sh
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-mv arch-config/.vimrc  ~/ 
-vim -c PlugInstall
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+mv arch-config/nvim ~/.config/
 ```
 参考链接：[vim-plug](https://github.com/junegunn/vim-plug)  
           [vim基本配置](http://www.ruanyifeng.com/blog/2018/09/vimrc.html)  
-          [coc.nvim](https://github.com/neoclide/coc.nvim)
+          [coc.nvim](https://github.com/neoclide/coc.nvim)  
+          [fgheng/vime](https://github.com/fgheng/vime)
 ## 输入法配置
 ```sh
 yay -S fcitx5-im   # fcitx5输入法框架
