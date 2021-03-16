@@ -1,0 +1,50 @@
+# For the benefit of emacs users: -*- shell-script -*-
+#
+#  _ _____ _     _            _
+# (_)___ /| |__ | | ___   ___| | _____
+# | | |_ \| '_ \| |/ _ \ / __| |/ / __|
+# | |___) | |_) | | (_) | (__|   <\__ \
+# |_|____/|_.__/|_|\___/ \___|_|\_\___/
+
+align=center
+separator=false
+color=#f8f8f2
+separator_block_width=15
+markup=pango
+
+[battery]
+command=cat /sys/class/power_supply/BAT1/capacity
+interval=2
+label=<span color='#50fa7b'>  </span>
+
+[wifi]
+command=iwgetid -r | tr '\n' ' ' && grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i%\n", int($3 * 100 / 70) }'
+instance=wlp1s0
+interval=5
+label=<span color="#f1fa8c"> </span>
+
+[home]
+command=df -h /home | awk 'FNR==2{print $4}'
+interval=3
+label=<span color="#ff79c6"> </span>
+
+[memory]
+command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
+interval=2
+label=<span color="#f1fa8c"> </span>
+
+[volume]
+command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'
+interval=1
+label=<span color="#ffb86c"> </span>
+
+[time_est]
+command=TZ=":US/Eastern" date '+%I:%M %Z'
+interval=1
+label=<span color="#bd93f9"> </span>
+
+[date]
+command=date '+%Y-%B%d %A'
+interval=60
+label=<span color="#8be9fd"> </span>
+
