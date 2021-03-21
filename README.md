@@ -1,17 +1,13 @@
 # arch-config
 Arch的一些配置
 
-## 克隆仓库
-```sh
-git clone https://github.com/SomeoneInJD/arch-config.git
-```
 ## i3配置
 ```sh
 mv arch-config/.Xresources ~/
 yay -S feh picom i3-gaps i3blocks i3lock ranger kitty xss-lock pulseaudio-ctl
 mv arch-config/i3 ~/.config/
 mv arch-config/i3block ~/.config/
-mv arch-config/kitty ~/.config/
+mv arch-config/alacritty ~/.config/
 mv arch-config/ranger ~/.config/
 ```
 ## Shell配置
