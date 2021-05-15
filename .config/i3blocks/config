@@ -23,11 +23,6 @@ instance=wlp1s0
 interval=5
 label=<span color="#f1fa8c"> </span>
 
-[home]
-command=df -h /home | awk 'FNR==2{print $4}'
-interval=3
-label=<span color="#ff79c6"> </span>
-
 [memory]
 command=free -h --si | awk 'FNR==2{ print $0 }' | awk '{ print $7 }'
 interval=2
@@ -38,13 +33,13 @@ command=pulseaudio-ctl full-status | awk '{ printf "%i%\n", $1 }'
 interval=1
 label=<span color="#ffb86c"> </span>
 
-[time_est]
-command=TZ=":US/Eastern" date '+%I:%M %Z'
+[time]
+command=date '+%H:%M'
 interval=1
 label=<span color="#bd93f9"> </span>
 
 [date]
-command=date '+%Y-%B%d %A'
+command=date '+%Y-%m-%d %A'
 interval=60
 label=<span color="#8be9fd"> </span>
 

@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/someoneinjd/Documents/Rust/kcore/os/src/mem'
+let g:netrw_dirhist_2='/home/someoneinjd/Documents/Rust/kcore/os/src'
+let g:netrw_dirhist_1='/home/someoneinjd/Documents/Rust/kcore/os'
+let g:netrw_dirhist_0='/home/someoneinjd/Documents/Rust/kcore/bootloader'
+let g:netrw_dirhist_9='/home/someoneinjd/Documents/Rust/rustsbi/platform/k210/.cargo'
+let g:netrw_dirhist_8='/home/someoneinjd/.config'
+let g:netrw_dirhist_7='/home/someoneinjd'
+let g:netrw_dirhist_6='/home/someoneinjd/.config/kitty'
+let g:netrw_dirhist_5='/home/someoneinjd/.config/i3'
+let g:netrw_dirhist_4='/home/someoneinjd/.config/nvim/config/plugin_config'

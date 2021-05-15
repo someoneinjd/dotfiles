@@ -1,0 +1,68 @@
+[aws]
+disabled = true
+
+[conda]
+disabled = true
+
+[dart]
+disabled = true
+
+[directory]
+read_only = " "
+
+[docker_context]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[golang]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[java]
+disabled = true
+
+[julia]
+disabled = true
+
+[memory_usage]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[scala]
+disabled = true
+
+[swift]
+disabled = true
