@@ -25,6 +25,8 @@
 
 
     "battery": {
+        "bat": "BAT1",
+        "design-capacity": true,
         "interval": 10,
         "states": {
             "warning": 30,
