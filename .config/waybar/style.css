@@ -1,0 +1,153 @@
+/* =============================================================================
+ *
+ * Waybar configuration
+ *
+ * Configuration reference: https://github.com/Alexays/Waybar/wiki/Configuration
+ *
+ * =========================================================================== */
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink-warning {
+    70% {
+        color: #e6e6e6;
+    }
+
+    to {
+        color: #e6e6e6;
+        background-color: #ffb86c;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+      color: #e6e6e6;
+    }
+
+    to {
+        color: #e6e6e6;
+        background-color: #ff5555;
+    }
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Base styles
+ * -------------------------------------------------------------------------- */
+
+/* Reset all styles */
+* {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* The whole bar */
+#waybar {
+    background: #323232;
+    color: #e6e6e6;
+    font-family: NotoSans Nerd Font, sans-serif;
+    font-size: 13px;
+}
+
+/* Each module */
+#battery,
+#clock,
+#custom-keyboard-layout,
+#memory,
+#network,
+#pulseaudio,
+#tray {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Module styles
+ * -------------------------------------------------------------------------- */
+
+#battery {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#battery.warning {
+    color: #ffb86c;
+}
+
+#battery.critical {
+    color: #ff5555;
+}
+
+#battery.warning.discharging {
+    animation-name: blink-warning;
+    animation-duration: 3s;
+}
+
+#battery.critical.discharging {
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+#clock {
+    
+    font-weight: bold;
+}
+
+
+#memory {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#memory.warning {
+    color: #ffb86c;
+}
+
+#memory.critical {
+    color: #ff5555;
+    animation-name: blink-critical;
+    animation-duration: 2s;
+}
+
+
+#network.disconnected {
+    color: #ffb86c;
+}
+
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#temperature {
+    /* No styles */
+}
+
+
+#window {
+    font-weight: bold;
+}
+
+#workspaces button {
+    border-bottom: 2px solid transparent;
+    /* To compensate for the top border and still have vertical centering */
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #6272a4;
+}
+
+#workspaces button.focused {
+    border-color: #8be9fd;
+    color: #e6e6e6;
+    background-color: #bd93f9;
+}
+

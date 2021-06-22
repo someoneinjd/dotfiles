@@ -7,6 +7,9 @@ disabled = true
 [dart]
 disabled = true
 
+[lua]
+disabled = true
+
 [directory]
 read_only = " "
 

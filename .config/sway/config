@@ -35,7 +35,7 @@ output * bg $(find $wallpapers_path -type f | shuf -n 1) fill
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
-output eDP-1 scale 1.75
+output eDP-1 scale 2
 ### Idle configuration
 #
 # Example configuration:
@@ -70,6 +70,7 @@ input "1118:2496:Microsoft_Surface_Type_Cover_Touchpad" {
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Control Volume and Brightness
     bindsym XF86AudioRaiseVolume  exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume  exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym XF86AudioMute         exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -227,16 +228,7 @@ exec_always {
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command i3blocks 
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
+    swaybar_command waybar 
 }
 
 include /etc/sway/config.d/*

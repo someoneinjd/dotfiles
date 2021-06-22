@@ -1,0 +1,127 @@
+{
+    "layer": "top",
+
+    "position": "top",
+
+    "height": 28,
+
+    "modules-left": [
+        "sway/workspaces",
+        "custom/spotify"
+    ],
+//    "modules-center": [
+//        "sway/window"
+//    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "memory",
+        "custom/keyboard-layout",
+        "battery",
+        "clock",
+        "tray"
+    ],
+
+
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        // Connected to AC
+        "format": "<span foreground='#50fa7b'>  {icon}</span>  {capacity}%", // Icon: bolt
+        // Not connected to AC
+        "format-discharging": "<span foreground='#50fa7b'>{icon}</span>  {capacity}%",
+        "format-icons": [
+            "", // Icon: battery-full
+            "", // Icon: battery-three-quarters
+            "", // Icon: battery-half
+            "", // Icon: battery-quarter
+            ""  // Icon: battery-empty
+        ],
+        "tooltip": true
+    },
+
+    "clock": {
+      "interval": 10,
+      "format": "<span foreground='#8be9fd'> </span> {:%Y-%m-%d %A  <span foreground='#bd93f9'></span> %H:%M}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>"
+    },
+
+    "custom/keyboard-layout": {
+      "exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+      // Interval set only as a fallback, as the value is updated by signal
+      "interval": 30,
+      "format": "<span foreground = '#ff5555'> </span> {}", // Icon: keyboard
+      // Signal sent by Sway key binding (~/.config/sway/key-bindings)
+      "signal": 1, // SIGHUP
+      "tooltip": false
+    },
+
+    "custom/spotify": {
+        "format": "<span foreground='#50fa7b'></span> {}",
+        "interval": 30, // Remove this if your script is endless and write in loop
+        "max-length": 40,
+        "on-click": "playerctl play-pause",
+        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null",
+        "exec-if": "$HOME/.config/waybar/playing.sh 2> /dev/null",
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "<span foreground='#f1fa8c'> </span> {}%", // Icon: memory
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "network": {
+        "interval": 5,
+        "interface": "wlp1s0",
+        "format-wifi": "<span foreground = '#ff79c6'> </span> {essid} ({signalStrength}%)", // Icon: wifi
+        "format-ethernet": "<span foreground='#ff79c6'> </span> {ifname}: {ipaddr}/{cidr}", // Icon: ethernet
+        "format-disconnected": "⚠  Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}"
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "max-length": 120
+    },
+
+    "sway/workspaces": {
+        "all-outputs": false,
+        "disable-scroll": true,
+        "format": "{icon} {name}",
+        "format-icons": {
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    "pulseaudio": {
+       "scroll-step": 1,
+       "format": "<span foreground='#ffb86c'>{icon}</span>  {volume}%",
+       "format-bluetooth": "<span color='#ffb86c'>{icon}</span>  {volume}%",
+       "format-muted": "",
+       "format-icons": {
+           "headphones": "",
+           "handsfree": "",
+           "headset": "",
+           "phone": "",
+           "portable": "",
+           "car": "",
+           "default": ["", ""]
+       },
+       "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+
+}
