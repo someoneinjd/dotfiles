@@ -1,0 +1,4 @@
+patch:
+  "menu/page_size": 5
+  schema_list:
+    - schema: clover
