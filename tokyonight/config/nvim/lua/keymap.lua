@@ -1,0 +1,17 @@
+local map = vim.api.nvim_set_keymap
+local opts = {noremap = true, silent = true}
+map('n', '<M-t>', '<CMD>lua require "FTerm".open()<CR>', opts)
+map('n', 'gh', '<CMD>Lspsaga lsp_finder<CR>', opts)
+map('n', 'ga', '<CMD>Lspsaga code_action<CR>', opts)
+map('n', 'K', '<CMD>Lspsaga hover_doc<CR>', opts)
+map('n', 'gr', '<CMD>Lspsaga rename<CR>', opts)
+map('n', '<M-p>', '<CMD>BufferLineCyclePrev<CR>', opts)
+map('n', '<M-n>', '<CMD>BufferLineCycleNext<CR>', opts)
+-- map('n', '<M-d>', '<CMD>BufferClose<CR>', opts)
+map('n', '<M-e>', '<CMD>NvimTreeOpen<CR>', opts)
+map('n', '<LEADER>xx', '<CMD>TroubleToggle<CR>', opts)
+map('n', '<LEADER>ff', '<CMD>Telescope find_file<CR>', opts)
+map('n', '<LEADER>fg', '<CMD>Telescope live_grep<CR>', opts)
+map('n', '<LEADER>fb', '<CMD>Telescope buffers<CR>', opts)
+map('n', '<LEADER>t', '<CMD>lua require "lsp_extensions".inlay_hints{prefix = " => ", only_current_file = true, enabled = {"ChainingHint", "TypeHint"}}<CR>', opts)
+map('n', '<M-f>', '<CMD>Format<CR>', opts)
