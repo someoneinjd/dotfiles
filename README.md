@@ -15,3 +15,4 @@ Arch的一些配置
 | Idle Management | swayidle+swaylock |
 | Brightness | brightnessctl |
 | Notification | mako |
+| Prompt | starship |
