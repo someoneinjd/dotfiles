@@ -15,7 +15,6 @@ LoadScript plugin_config/neoformat.vim
 LoadScript plugin_config/coc.vim
 LoadScript plugin_config/airline.vim
 LoadScript plugin_config/explorer.vim
+LoadScript plugin_config/leaderf.vim
 LoadScript plugin_config/floaterm.vim
-LoadScript plugin_config/markdown.vim
-LoadScript plugin_config/telescope.vim
-LoadScript plugin_config/nvim-treesitter.vim
+LoadScript plugin_config/rainbow.vim

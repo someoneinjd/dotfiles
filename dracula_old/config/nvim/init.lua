@@ -1,2 +1,0 @@
-require 'base'
-require 'plugins'
