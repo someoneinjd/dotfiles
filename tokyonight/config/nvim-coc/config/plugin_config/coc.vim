@@ -1,7 +1,8 @@
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <plug>(coc-type-definition)
-nmap <silent> gi <plug>(coc-implementation)
-nmap <silent> gr <plug>(coc-references)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gn <Plug>(coc-diagnostic-next-error)
 nmap <silent> <M-r> <Plug>(coc-rename)
 
 nnoremap <silent> K :call CocAction('doHover')<CR>

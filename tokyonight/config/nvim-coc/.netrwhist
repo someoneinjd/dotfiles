@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/sunce/Documents/Rust/kcore/os/src/mem'
+let g:netrw_dirhist_7='/Users/sunce/Documents/Rust/kcore/os/src'
+let g:netrw_dirhist_6='/Users/sunce/Documents/Rust/kcore/os'
+let g:netrw_dirhist_5='/Users/sunce/Documents/Rust/kcore'
+let g:netrw_dirhist_4='/Users/sunce/Documents/Rust'
+let g:netrw_dirhist_3='/Users/sunce/Documents'
+let g:netrw_dirhist_2='/Users/sunce'
+let g:netrw_dirhist_1='/Users/sunce/.config/nvim/config/plugin_config'
+let g:netrw_dirhist_0='/Users/sunce/quicklisp'
+let g:netrw_dirhist_9='/Users/sunce/Documents/Rust/kcore/user/src/bin'

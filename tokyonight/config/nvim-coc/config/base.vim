@@ -15,5 +15,5 @@ set showmatch
 set cursorline
 set termguicolors
 set nowrap
-set guifont=Fira\ Code\ Nerd\ Font:h28
+set guifont=FiraCode\ Nerd\ Font\ Mono:h14
 set clipboard+=unnamedplus
