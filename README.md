@@ -22,5 +22,6 @@ Arch的一些配置
 
 ## 截屏
 
-![](./screenshot.png)
+![](./img/all.png)
+![](./img/zathura.png)
 
