@@ -1,4 +1,4 @@
-set font			"mononoki Nerd Font 10"
+set font "monospace 10"
 set default-fg 			"#c0caf5"
 set default-bg 			"#24283b"
 
