@@ -18,7 +18,7 @@ Arch的一些配置
 * 截屏：[grim](https://github.com/emersion/grim)
 * 通知：[mako](https://github.com/emersion/mako)
 * Shell提示符：[starship](https://github.com/starship/starship)
-* 启动器: [sway-launcher-desktop](https://github.com/Biont/sway-launcher-desktop) 
+* 启动器: [wofi](https://hg.sr.ht/~scoopta/wofi) 
 
 ## 截屏
 
