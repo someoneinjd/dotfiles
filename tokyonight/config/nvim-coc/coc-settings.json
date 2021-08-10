@@ -1,4 +1,58 @@
 {
     "explorer.icon.enableNerdfont": true,
-    "clangd.semanticHighlighting": true
+    "clangd.semanticHighlighting": true,
+    "explorer.keyMappings.global": {
+        "<c-o>": "noop",
+
+        "*": "toggleSelection",
+        "<tab>": "actionMenu",
+
+        "gk": ["wait", "expandablePrev"],
+        "gj": ["wait", "expandableNext"],
+        "h": ["wait", "collapse"],
+        "l": ["wait", "expandable?", "expand", "open"],
+        "J": ["wait", "toggleSelection", "normal:j"],
+        "K": ["wait", "toggleSelection", "normal:k"],
+        "gl": ["wait", "expand:recursive"],
+        "gh": ["wait", "collapse:recursive"],
+
+        "o": ["wait", "expanded?", "collapse", "expand"],
+        "<cr>": ["wait", "expandable?", "cd", "open"],
+        "e": "open",
+        "s": "open:split",
+        "E": "open:vsplit",
+        "t": "open:tab",
+        "<bs>": ["wait", "gotoParent"],
+        "gs": ["wait", "reveal:select"],
+        "il": "preview:labeling",
+        "ic": "preview:content",
+        "Il": "previewOnHover:toggle:labeling",
+        "Ic": "previewOnHover:toggle:content",
+        "II": "previewOnHover:disable",
+
+        "yp": "copyFilepath",
+        "yn": "copyFilename",
+        "yy": "copyFile",
+        "dd": "cutFile",
+        "p": "pasteFile",
+        "df": "delete",
+        "dF": "deleteForever",
+
+        "a": "addFile",
+        "A": "addDirectory",
+        "r": "rename",
+
+        "zh": "toggleHidden",
+        "g<dot>": "toggleHidden",
+        "R": "refresh",
+
+        "?": "help",
+        "q": "quit",
+        "<esc>": "esc",
+        "X": "systemExecute",
+        "gd": "listDrive",
+
+        "f": "search",
+        "F": "searchRecursive"
+    }
 }
