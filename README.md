@@ -19,6 +19,8 @@ My Arch config
 * Notify: [mako](https://github.com/emersion/mako)
 * Shell Prompt: [starship](https://github.com/starship/starship)
 * Launcher:  [wofi](https://hg.sr.ht/~scoopta/wofi) 
+* Browser: [firefox](https://www.firefox.com) (with tokyonight theme)
+* Startpage: [here](./tokyonight/config/startpage/README.md)
 
 ## Neovim Config
 
@@ -33,5 +35,8 @@ See [here](./tokyonight/config/nvim/README.md)
 ## Screenshots
 
 ![](./img/all.png)
+
 ![](./img/zathura.png)
+
+![](./img/firefox.png)
 
