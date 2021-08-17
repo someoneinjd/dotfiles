@@ -5,7 +5,7 @@ My Arch config
 
 * Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
 * Colorscheme: [tokyonight](https://github.com/folke/tokyonight.nvim)
-* Shell: [fish](http: //fishshell.com/)
+* Shell: [fish](http://fishshell.com/)
 * WM: [sway](https://github.com/swaywm/sway)
 * DM:  [tuigreet](https://github.com/apognu/tuigreet)
 * Editor: [neovim](http://neovim.org/)
