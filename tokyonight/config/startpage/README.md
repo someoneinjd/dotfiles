@@ -3,7 +3,7 @@ This is my startpage with tokyonight theme
 
 ## Commands
 5 search commands are implemented.
-To run them use the keyword /<letter> and type the rest of the string. Then press enter.
+To run them use the keyword `/<letter>` and type the rest of the string. Then press enter.
 And if you only type the keyword, the browser will jump to the corresponding homepage.
 
 * `/g` Searchs in google search (default)
