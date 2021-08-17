@@ -20,11 +20,11 @@ My Arch config
 * Shell Prompt: [starship](https://github.com/starship/starship)
 * Launcher:  [wofi](https://hg.sr.ht/~scoopta/wofi) 
 * Browser: [firefox](https://www.firefox.com) (with tokyonight theme)
-* Startpage: [here](./tokyonight/config/startpage/README.md)
+* Startpage: [here](./tokyonight/config/startpage/)
 
 ## Neovim Config
 
-See [here](./tokyonight/config/nvim/README.md)
+See [here](./tokyonight/config/nvim/)
 
 ## Neovim Screenshots
 

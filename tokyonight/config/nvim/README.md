@@ -8,7 +8,7 @@ This is my neovim configurations(pure lua)
 
 ## Other Configurations
 
-[here](../nvim-coc/README.md) is my old configuration(pure vimscript), and [here](../nvim-min/README.md) is a minimal configuration without external dependencies.
+[here](../nvim-coc/) is my old configuration(pure vimscript), and [here](../nvim-min/) is a minimal configuration without external dependencies.
 
 ## Plugins
 
