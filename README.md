@@ -20,6 +20,16 @@ My Arch config
 * Shell Prompt: [starship](https://github.com/starship/starship)
 * Launcher:  [wofi](https://hg.sr.ht/~scoopta/wofi) 
 
+## Neovim Config
+
+See [here](./tokyonight/config/nvim/README.md)
+
+## Neovim Screenshots
+
+![](./img/normal.png)
+
+![](./img/lsp-finder.png)
+
 ## Screenshots
 
 ![](./img/all.png)
