@@ -26,8 +26,7 @@ This is my neovim configurations(pure lua)
 * File Explorer: [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
 * Syntax Highlighting: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * Autopairs: [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-* Rust: [lsp_extensions.nvim](https://github.com/nvim-lua/lsp_extensions.nvim) (for rust-analyzer's inlay hints)
-* Terminal: [FTerm.nvim](https://github.com/numToStr/FTerm.nvim)
+* Terminal: [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
 * Format: [formatter.nvim](https://github.com/mhartington/formatter.nvim)
 * Statusline:
     * Basic statusline: [galaxyline.nvim](https://github.com/glepnir/galaxyline.nvim)
@@ -44,7 +43,7 @@ This is my neovim configurations(pure lua)
 | Meta + f    | Format code                               |
 | Meta + n    | Goto next tab                             |
 | Meta + p    | Goto previous tab                         |
-| Meta + d    | Close current tab                         |
+| Meta + d    | Close current tab/terminal                |
 | gh          | Show all references and declaration       |
 | gr          | Rename                                    |
 | ga          | Code Actions                              |
@@ -53,7 +52,6 @@ This is my neovim configurations(pure lua)
 | Leader + ff | Search files                              |
 | Leader + fg | Live grep                                 |
 | Leader + fb | Search buffer                             |
-| Leader + t  | Show inlay hints (only for rust-analyzer) |
 
 ## Screenshots
 

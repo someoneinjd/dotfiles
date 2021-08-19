@@ -1,14 +1,13 @@
 return require('packer').startup(function(use)
     use {'wbthomason/packer.nvim'}
+    use {'kyazdani42/nvim-tree.lua'}
     use {'neovim/nvim-lspconfig'}
     use {'glepnir/lspsaga.nvim'}
     use {'nvim-lua/popup.nvim'}
     use {'nvim-lua/plenary.nvim'}
     use {'nvim-telescope/telescope.nvim'}
-    use {'nvim-lua/lsp_extensions.nvim'}
     use {'mhartington/formatter.nvim'}
     use {'L3MON4D3/Luasnip'}
-    use {'kyazdani42/nvim-tree.lua'}
     use {'nvim-lua/lsp-status.nvim'}
     use {
         'ray-x/lsp_signature.nvim',
@@ -27,10 +26,6 @@ return require('packer').startup(function(use)
         'folke/lsp-colors.nvim',
         config = function() require 'lsp-colors'.setup {} end,
         ft = {'c', 'cpp', 'rust', 'lua'}
-    }
-    use {
-        'numToStr/FTerm.nvim',
-        config = function() require 'FTerm'.setup {} end,
     }
     use {
         'windwp/nvim-autopairs',
