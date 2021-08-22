@@ -2,10 +2,6 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 local M = {}
 
-M.base = function()
-    map('n', '<M-d>', '<CMD>bwipe<CR>', opts)
-end
-
 M.lspsaga = function()
     map('n', '<M-t>', '<CMD>lua require "lspsaga.floaterm".open_float_terminal()<CR>', opts)
     map('n', 'gh', '<CMD>Lspsaga lsp_finder<CR>', opts)
@@ -18,6 +14,7 @@ end
 M.bufferline = function()
     map('n', '<M-p>', '<CMD>BufferLineCyclePrev<CR>', opts)
     map('n', '<M-n>', '<CMD>BufferLineCycleNext<CR>', opts)
+    map('n', '<M-d>', '<CMD>bwipe<CR>', opts)
 end
 
 M.nvimtree = function()
