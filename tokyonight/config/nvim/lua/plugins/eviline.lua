@@ -90,7 +90,11 @@ gls.left[7] = {
 
 gls.left[8] = {
   LeftEnd = {
-    provider = function() return require('lsp-status').status() end,
+    provider = function()
+        local ret, lsp_status = pcall(require, 'lsp-status')
+        if not ret then return '(no LSP)' end
+        return require('lsp-status').status()
+    end,
     highlight = {colors.blue, colors.bg}
   }
 }

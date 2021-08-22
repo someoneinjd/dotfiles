@@ -29,26 +29,6 @@ _G.s_tab_complete = function()
     end
 end
 
-require 'compe'.setup {
-    enable = true;
-    autocomplete = true;
-    debug = false;
-    min_length = 1;
-    preselect = 'enable';
-    throttle_time = 80;
-    source_timeout = 200;
-    incomplete_delay = 400;
-    max_abbr_width = 100;
-    max_menu_width = 100;
-    documention = true;
-
-    source = {
-        path = { kind = "", true },
-        buffer = { kind = "", true },
-        nvim_lsp = true,
-    };
-}
-
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
