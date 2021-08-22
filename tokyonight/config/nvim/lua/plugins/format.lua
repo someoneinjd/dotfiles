@@ -1,4 +1,4 @@
-require('formatter').setup({
+require 'formatter'.setup {
   logging = false,
   filetype = {
     rust = {
@@ -33,4 +33,4 @@ require('formatter').setup({
         end
     }
   }
-})
+}

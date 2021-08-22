@@ -1,6 +1,6 @@
 local lsp_status = require('lsp-status')
 lsp_status.config {
-    indicator_hint = ' ',
+    indicator_hint = ' ',
     indicator_info = ' ',
     status_symbol = ''
 }
@@ -57,33 +57,3 @@ lspconfig.sumneko_lua.setup {
         },
     },
 }
-require 'lspsaga'.init_lsp_saga()
-
-vim.lsp.protocol.CompletionItemKind = {
-    "",
-    "",
-    "",
-    " ",
-    "ﴲ",
-    "[]",
-    "",
-    "ﰮ",
-    "",
-    "襁",
-    "",
-    " ",
-    "練",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "ﲀ",
-    "ﳤ",
-    "",
-    "",
-    ""
-}
-

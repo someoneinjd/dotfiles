@@ -1,5 +1,5 @@
-vim.cmd('syntax on')
-vim.cmd('filetype indent on')
+vim.cmd 'syntax on'
+vim.cmd 'filetype indent on'
 vim.o.termguicolors = true
 vim.o.smarttab = true
 vim.o.swapfile = false
@@ -18,3 +18,7 @@ vim.wo.cursorline = true
 vim.wo.relativenumber = true
 vim.o.completeopt = "menuone,noselect"
 vim.o.pumheight = 20
+
+return {
+    lsp_filetypes = {'c', 'cpp', 'rust', 'lua'}
+}

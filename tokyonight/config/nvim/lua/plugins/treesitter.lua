@@ -1,5 +1,7 @@
+local filetypes = require 'base'.lsp_filetyps
+
 require 'nvim-treesitter.configs'.setup {
-    ensure_installed = {'c', 'cpp', 'lua', 'rust'},
+    ensure_installed = filetypes,
     highlight = {
         enable = true
     }
