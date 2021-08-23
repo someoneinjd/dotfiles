@@ -39,5 +39,8 @@ See [here](./tokyonight/config/nvim/)
 
 ![](./img/zathura.png)
 
-![](./img/firefox.png)
+![](./img/wlogout.png)
 
+![](./img/swaylock-effects.png)
+
+![](./img/firefox.png)
