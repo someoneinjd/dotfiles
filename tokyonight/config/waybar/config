@@ -23,11 +23,11 @@
     "custom/date": {
         "format": "  {}",
         "interval": 3600,
-        "exec": "/home/someoneinjd/.config/waybar/date.sh"
+        "exec": "$HOME/.local/bin/date.sh"
     },
     "custom/power": {
         "format": "",
-        "on-click": "/home/someoneinjd/.config/waybar/poweroff.sh"
+        "on-click": "$HOME/.local/bin/poweroff.sh"
     },
     "clock": {
         "format": " {:%H:%M}",
