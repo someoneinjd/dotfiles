@@ -9,7 +9,6 @@ set $term kitty
 set $wallpapers_path $HOME/Pictures/wallpapers
 
 set $menu wofi --hide-scroll | xargs swaymsg exec --
-set $expolorer exec kitty --class=ranger -e ranger
 
 input * xkb_capslock enable
 xwayland disable
@@ -26,10 +25,9 @@ input "1118:2496:Microsoft_Surface_Type_Cover_Touchpad" {
     middle_emulation enabled
 }
 
+bindsym $mod+F8 exec grim
 
-bindsym $mod+F8 exec grim $(slurp)
-
-bindsym $mod+F10 exec wlogout -p layer-shell
+bindsym $mod+Shift+F8 exec grim $(slurp)
 
 bindsym $mod+Return exec $term
 
@@ -39,6 +37,7 @@ bindsym XF86AudioMute         exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute      exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym XF86MonBrightnessUp   exec brightnessctl set +5%
+bindsym XF86PowerOff          exec $HOME/.local/bin/poweroff.sh
 
 bindsym $mod+q kill
 
@@ -107,11 +106,10 @@ bindsym $mod+space focus mode_toggle
 
 bindsym $mod+a focus parent
 
-for_window [app_id="^ranger$"] floating enable, sticky enable, resize set 90 ppt 60 ppt, border pixel 10
-
 bindsym $mod+Shift+minus move scratchpad
 
 bindsym $mod+minus scratchpad show
+
 gaps inner 5
 gaps outer 5
 default_border pixel 2
@@ -124,17 +122,17 @@ client.urgent           #e0af68 #e0af68 #1d202f #7dcfff   #e0af68
 
 mode "resize" {
     bindsym $left resize shrink width 10px
-        bindsym $down resize grow height 10px
-        bindsym $up resize shrink height 10px
-        bindsym $right resize grow width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
 
-        bindsym Left resize shrink width 10px
-        bindsym Down resize grow height 10px
-        bindsym Up resize shrink height 10px
-        bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
