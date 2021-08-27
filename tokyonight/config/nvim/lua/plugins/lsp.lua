@@ -1,4 +1,4 @@
-local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
+local signs = { Error = " ", Warning = " ", Hint = " ", Information = " " }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
@@ -8,35 +8,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 
 for type, icon in pairs(signs) do
-  local hl = "LspDiagnosticsSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+    local hl = "LspDiagnosticsSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
-
-vim.lsp.protocol.CompletionItemKind = {
-    "",
-    "",
-    "",
-    " ",
-    "ﴲ",
-    "[]",
-    "",
-    "ﰮ",
-    "",
-    "襁",
-    "",
-    " ",
-    "練",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "ﲀ",
-    "ﳤ",
-    "",
-    "",
-    ""
-}
-
