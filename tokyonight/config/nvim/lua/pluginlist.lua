@@ -18,8 +18,9 @@ return require 'packer'.startup(function(use)
 
     use {
         'kyazdani42/nvim-tree.lua',
+        cmd = "NvimTreeToggle",
         setup = function() require 'mappings'.nvimtree() end,
-        cmd = "NvimTreeToggle"
+        config = function() require 'plugins.nvimtree' end
     }
 
     use {
