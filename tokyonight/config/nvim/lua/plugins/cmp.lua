@@ -1,6 +1,15 @@
 local cmp = require 'cmp'
 local icons = require 'plugins.icons'
 
+local t = function(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
+
+local check_back_space = function()
+  local col = vim.fn.col '.' - 1
+  return col == 0 or vim.fn.getline('.'):sub(col, col):match '%s' ~= nil
+end
+
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -10,7 +19,7 @@ cmp.setup {
     formatting = {
         format = function(entry, vim_item)
             -- load lspkind icons
-            vim_item.kind = string.format("%s %s", icons[vim_item.kind], vim_item.kind)
+            vim_item.kind = icons[vim_item.kind]
 
             vim_item.menu = ({
                     nvim_lsp = "[LSP]",
@@ -30,24 +39,26 @@ cmp.setup {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true
         },
-        ["<Tab>"] = function(fallback)
+        ["<Tab>"] = cmp.mapping(function(fallback)
             if vim.fn.pumvisible() == 1 then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-n>", true, true, true), "n")
-            elseif require "luasnip".expand_or_jumpable() then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-expand-or-jump", true, true, true), "")
+                vim.fn.feedkeys(t("<C-n>"), "n")
+            elseif require 'luasnip'.expand_or_jumpable() then
+                vim.fn.feedkeys(t("<Plug>luasnip-expand-or-jump"), "")
+            elseif check_back_space() then
+                vim.fn.feedkeys(t("<Tab>"), "n")
             else
                 fallback()
             end
-        end,
-        ["<S-Tab>"] = function(fallback)
+        end, {"i", "s"}),
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
             if vim.fn.pumvisible() == 1 then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<C-p>", true, true, true), "n")
-            elseif  require "luasnip".jumpable(-1) then
-                vim.fn.feedkeys(vim.api.nvim_replace_termcodes("<Plug>luasnip-jump-prev", true, true, true), "")
+                vim.fn.feedkeys(t("<C-p>"), "n")
+            elseif require 'luasnip'.jumpable(-1) then
+                vim.fn.feedkeys(t("<Plug>luasnip-jump-prev"), "")
             else
                 fallback()
             end
-        end
+        end, {"i", "s"})
     },
     sources = {
         { name = "nvim_lsp" },
