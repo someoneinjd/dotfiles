@@ -31,7 +31,7 @@ This is my neovim configurations(pure lua)
 * Statusline:
     * Basic statusline: [galaxyline.nvim](https://github.com/glepnir/galaxyline.nvim)
     * LSP client's statusline component: [lsp-status.nvim](https://github.com/nvim-lua/lsp-status.nvim)
-* Bufferline: [nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua)
+* Bufferline: [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 * Colorscheme: [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 
 ## Key Bingings
