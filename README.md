@@ -1,7 +1,7 @@
 # dotfiles
 My Arch config
 
-## Software
+## Specifications
 
 * Terminal: [kitty](https://sw.kovidgoyal.net/kitty/)
 * Colorscheme: [tokyonight](https://github.com/folke/tokyonight.nvim)
@@ -14,10 +14,10 @@ My Arch config
 * File Manager: [ranger](https://ranger.github.io/)
 * Brightness: [brightnessctl](https://github.com/Hummer12007/brightnessctl)
 * PDF Reader: [zathura](https://git.pwmt.org/pwmt/zathura)
-* Screen Locker: [swayidle](https://github.com/swaywm/swayidle) [swaylock-effects](https://github.com/mortie/swaylock-effects)
+* Screen Locking: [swayidle](https://github.com/swaywm/swayidle) [swaylock-effects](https://github.com/mortie/swaylock-effects)
 * Screenshot: [grim](https://github.com/emersion/grim) [slurp](https://github.com/emersion/slurp)
 * Logout Menu: [wlogout](https://github.com/ArtsyMacaw/wlogout)
-* Notify: [mako](https://github.com/emersion/mako)
+* Notification: [mako](https://github.com/emersion/mako)
 * Shell Prompt: [starship](https://github.com/starship/starship)
 * Launcher:  [wofi](https://hg.sr.ht/~scoopta/wofi) 
 * Browser: [firefox](https://www.firefox.com) (with tokyonight theme)
