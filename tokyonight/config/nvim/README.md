@@ -1,6 +1,6 @@
 # Neovim Config
 
-This is my neovim configurations(pure lua)
+This is my neovim configurations (pure lua)
 
 ## Guide for lua in neovim
 
@@ -8,7 +8,7 @@ This is my neovim configurations(pure lua)
 
 ## Other Configurations
 
-[here](../nvim-coc/) is my old configuration(pure vimscript), and [here](../nvim-min/) is a minimal configuration without external dependencies.
+[here](https://github.com/someoneinjd/dotfiles-mac/tree/main/config/nvim) is my another nvim configuration (pure vimscript), and [here](../nvim-min/) is a minimal configuration without external dependencies.
 
 ## Plugins
 
