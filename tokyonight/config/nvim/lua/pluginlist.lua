@@ -30,7 +30,7 @@ return require 'packer'.startup(function(use)
     }
 
     use {
-        'glepnir/lspsaga.nvim',
+        'tami5/lspsaga.nvim',
         after = 'nvim-lspconfig',
         setup = function() require 'mappings'.lspsaga() end,
         config = function() require 'lspsaga'.init_lsp_saga() end
@@ -88,6 +88,11 @@ return require 'packer'.startup(function(use)
         after = "cmp-nvim-lsp"
     }
 
+    use {
+        'hrsh7th/cmp-path',
+        after = 'cmp-buffer'
+    }
+    
     use {
         'glepnir/galaxyline.nvim',
         config = function() require 'plugins.eviline' end
