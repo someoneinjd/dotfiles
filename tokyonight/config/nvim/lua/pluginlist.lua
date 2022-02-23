@@ -13,12 +13,12 @@ return require 'packer'.startup(function(use)
     use {
         'nvim-telescope/telescope.nvim',
         setup = function() require 'mappings'.telescope() end,
-        after = "plenary.nvim"
+        after = 'plenary.nvim'
     }
 
     use {
         'kyazdani42/nvim-tree.lua',
-        cmd = "NvimTreeToggle",
+        cmd = 'NvimTreeToggle',
         setup = function() require 'mappings'.nvimtree() end,
         config = function() require 'plugins.nvimtree' end
     }
@@ -39,7 +39,7 @@ return require 'packer'.startup(function(use)
     use {
         'mhartington/formatter.nvim',
         ft = filetypes,
-        cmd = "Format",
+        cmd = 'Format',
         setup = function() require 'mappings'.formatter() end,
         config = function() require 'plugins.format' end
     }
@@ -52,7 +52,7 @@ return require 'packer'.startup(function(use)
 
     use {
         'ray-x/lsp_signature.nvim',
-        after = "lspsaga.nvim",
+        after = 'lspsaga.nvim',
         config = function() require 'plugins.signature' end
     }
 
@@ -64,7 +64,7 @@ return require 'packer'.startup(function(use)
 
     use {
         'hrsh7th/nvim-cmp',
-        event = "InsertEnter",
+        event = 'InsertEnter',
         config = function() require 'plugins.cmp' end
     }
 
@@ -75,26 +75,26 @@ return require 'packer'.startup(function(use)
 
     use {
         'saadparwaiz1/cmp_luasnip',
-        after = "LuaSnip"
+        after = 'LuaSnip'
     }
 
     use {
         'hrsh7th/cmp-nvim-lsp',
-        after = "cmp_luasnip"
-    }
-
-    use {
-        'hrsh7th/cmp-buffer',
-        after = "cmp-nvim-lsp"
+        after = 'cmp_luasnip'
     }
 
     use {
         'hrsh7th/cmp-path',
-        after = 'cmp-buffer'
+        after = 'cmp-nvim-lsp'
     }
-    
+
     use {
-        'glepnir/galaxyline.nvim',
+        'hrsh7th/cmp-buffer',
+        after = 'cmp-path'
+    }
+
+    use {
+        'NTBBloodbath/galaxyline.nvim',
         config = function() require 'plugins.eviline' end
     }
 
@@ -102,7 +102,7 @@ return require 'packer'.startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         ft = filetypes,
         run = ':TSUpdate',
-        event = "BufRead",
+        event = 'BufRead',
         config = function() require 'plugins.treesitter' end
     }
 

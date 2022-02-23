@@ -37,23 +37,7 @@ lspconfig.rust_analyzer.setup {
     capabilities = capabilities
 }
 
-lspconfig.sumneko_lua.setup {
-    cmd = {'lua-language-server', '-E', sumneko_root_path .. '/main.lua'};
-    settings = {
-        Lua = {
-            runtime = {
-                version = 'LuaJIT',
-                path = runtime_path,
-            },
-            diagnostics = {
-                globals = {'vim'},
-            },
-            workspace = {
-                library = vim.api.nvim_get_runtime_file('', true),
-            },
-            telemetry = {
-                enable = false,
-            },
-        },
-    },
+lspconfig.pyright.setup {
+    on_attach = lsp_status.on_attach,
+    capabilities = capabilities
 }
