@@ -20,5 +20,5 @@ vim.o.completeopt = "menuone,noselect"
 vim.o.pumheight = 20
 
 return {
-    lsp_filetypes = {'c', 'cpp', 'rust', 'lua'}
+    lsp_filetypes = {'c', 'cpp', 'rust', 'python'}
 }
