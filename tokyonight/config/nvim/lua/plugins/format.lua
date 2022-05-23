@@ -42,6 +42,16 @@ require 'formatter'.setup {
                 cwd = vim.fn.expand('%:p:h')  -- Run clang-format in cwd of the file.
             }
             end
+        },
+        python = {
+            -- black
+            function()
+                return {
+                    exe = "black",
+                    args = { '-' },
+                    stdin = true,
+                }
+            end
         }
     }
 }
