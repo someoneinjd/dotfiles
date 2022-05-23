@@ -5,6 +5,7 @@ vim.o.smarttab = true
 vim.o.swapfile = false
 vim.o.showmode = false
 vim.o.showtabline = 2
+vim.o.laststatus = 3
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.clipboard = 'unnamedplus'
