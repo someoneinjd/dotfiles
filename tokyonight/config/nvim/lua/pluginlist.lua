@@ -45,9 +45,9 @@ return require 'packer'.startup(function(use)
     }
 
     use {
-        'nvim-lua/lsp-status.nvim',
+        'j-hui/fidget.nvim',
         after = 'nvim-lspconfig',
-        config = function() require 'plugins.lsp-status' end
+        config = function() require 'fidget'.setup {text = {spinner = 'dots_negative'}} end
     }
 
     use {
@@ -94,7 +94,7 @@ return require 'packer'.startup(function(use)
     }
 
     use {
-        'NTBBloodbath/galaxyline.nvim',
+        'nvim-lualine/lualine.nvim',
         config = function() require 'plugins.eviline' end
     }
 
