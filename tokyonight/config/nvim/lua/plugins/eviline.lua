@@ -19,6 +19,7 @@ local colors = {
   red      = '#ec5f67',
 }
 
+
 local conditions = {
   buffer_not_empty = function()
     return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
@@ -129,6 +130,8 @@ ins_left {
 ins_left {
     'filetype',
     icon_only = true,
+    separator = '',
+    padding = {right = 0, left = 1},
     cond = conditions.buffer_not_empty,
 }
 
@@ -206,7 +209,7 @@ ins_right {
 ins_right {
   'diff',
   -- Is it me or the symbol for modified us really weird
-  symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+  symbols = { added = ' ', modified = ' ', removed = ' ' },
   diff_color = {
     added = { fg = colors.green },
     modified = { fg = colors.orange },

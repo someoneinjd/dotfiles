@@ -28,9 +28,8 @@ This is my neovim configurations (pure lua)
 * Autopairs: [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 * Terminal: [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
 * Format: [formatter.nvim](https://github.com/mhartington/formatter.nvim)
-* Statusline:
-    * Basic statusline: [galaxyline.nvim](https://github.com/glepnir/galaxyline.nvim)
-    * LSP client's statusline component: [lsp-status.nvim](https://github.com/nvim-lua/lsp-status.nvim)
+* Statusline: [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+* LSP Status: [fidget.nvim](https://github.com/j-hui/fidget.nvim)
 * Bufferline: [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 * Colorscheme: [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 
