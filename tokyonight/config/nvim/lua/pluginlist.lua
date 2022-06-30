@@ -30,7 +30,7 @@ return require 'packer'.startup(function(use)
     }
 
     use {
-        'tami5/lspsaga.nvim',
+        'glepnir/lspsaga.nvim',
         after = 'nvim-lspconfig',
         setup = function() require 'mappings'.lspsaga() end,
         config = function() require 'lspsaga'.init_lsp_saga() end
