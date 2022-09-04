@@ -27,7 +27,7 @@ input "1118:2496:Microsoft_Surface_Type_Cover_Touchpad" {
 
 bindsym $mod+F8 exec grim
 
-bindsym $mod+Shift+F8 exec grim $(slurp)
+bindsym $mod+Shift+F8 exec grim -g "$(slurp)"
 
 bindsym $mod+Return exec $term
 
