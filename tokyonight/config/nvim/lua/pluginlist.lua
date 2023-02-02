@@ -33,7 +33,7 @@ return require 'packer'.startup(function(use)
         'glepnir/lspsaga.nvim',
         after = 'nvim-lspconfig',
         setup = function() require 'mappings'.lspsaga() end,
-        config = function() require 'lspsaga'.init_lsp_saga() end
+        config = function() require 'lspsaga'.setup { symbol_in_winbar = { enable = false } } end
     }
 
     use {
