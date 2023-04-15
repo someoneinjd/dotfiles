@@ -3,7 +3,7 @@ local filetypes = require 'base'.lsp_filetypes
 return require 'packer'.startup(function(use)
     use {'wbthomason/packer.nvim'}
 
-    use {'kyazdani42/nvim-web-devicons'}
+    use {'nvim-tree/nvim-web-devicons'}
 
     use {
         'nvim-lua/plenary.nvim',
@@ -17,7 +17,7 @@ return require 'packer'.startup(function(use)
     }
 
     use {
-        'kyazdani42/nvim-tree.lua',
+        'nvim-tree/nvim-tree.lua',
         cmd = 'NvimTreeToggle',
         setup = function() require 'mappings'.nvimtree() end,
         config = function() require 'nvim-tree'.setup {} end
@@ -30,7 +30,7 @@ return require 'packer'.startup(function(use)
     }
 
     use {
-        'glepnir/lspsaga.nvim',
+        'nvimdev/lspsaga.nvim',
         after = 'nvim-lspconfig',
         setup = function() require 'mappings'.lspsaga() end,
         config = function() require 'lspsaga'.setup { symbol_in_winbar = { enable = false } } end
