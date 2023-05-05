@@ -54,8 +54,8 @@
     },
     "network": {
         "format-wifi": "  {essid}",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} 󰊗",
+        "format-linked": "{ifname} (No IP) 󰊗",
         "format-disconnected": "⚠  Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
@@ -64,8 +64,8 @@
         "format-muted": " Muted",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
             "phone": "",
             "portable": "",
             "car": "",
