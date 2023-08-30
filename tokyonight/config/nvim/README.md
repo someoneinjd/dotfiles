@@ -12,7 +12,7 @@ This is my neovim configurations (pure lua)
 
 ## Plugins
 
-* Plugin Manager: [packer.nvim](https://github.com/wbthomason/packer.nvim)
+* Plugin Manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
 * LSP:
     * Basic config: [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
     * Enhanced UI: [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
