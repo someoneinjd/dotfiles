@@ -1,48 +1,30 @@
-local lspconfig = require 'lspconfig';
-local signs = { Error = "󰅚 ", Warn = " ", Hint = "󰌶 ", Info = " " }
+local lsp_zero = require("lsp-zero")
+lsp_zero.extend_lspconfig()
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-    underline = true,
-    update_in_insert = false,
-    virtual_text = { spacing = 4, prefix = "●" },
-    severity_sort = true,
+lsp_zero.on_attach(function(client, bufnr)
+  lsp_zero.default_keymaps({ buffer = bufnr })
+end)
+
+lsp_zero.set_sign_icons({
+  error = "󰅚 ",
+  warn = " ",
+  hint = "󰌶 ",
+  info = " ",
 })
 
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {border = 'single'})
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "●", -- Could be '●', '▎', 'x', ■
+    spacing = 4,
+  },
+})
 
-for name, icon in pairs(signs) do
-    local hl = "DiagnosticSign" .. name
-    vim.fn.sign_define(hl, { text = icon, texthl = hl, namehl = ""})
+for _, val in ipairs({ "rust_analyzer", "clangd", "pyright" }) do
+  require("lspconfig")[val].setup({
+    on_attach = function(client, bufnr)
+      if client.server_capabilities.inlayHintProvider then
+        vim.lsp.inlay_hint(bufnr, true)
+      end
+    end,
+  })
 end
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.documentationFormat = { "markdown", "plaintext" }
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities.textDocument.completion.completionItem.preselectSupport = true
-capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
-capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
-capabilities.textDocument.completion.completionItem.deprecatedSupport = true
-capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
-capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
-capabilities.textDocument.completion.completionItem.resolveSupport = {
-   properties = {
-      "documentation",
-      "detail",
-      "additionalTextEdits",
-   },
-}
-
-lspconfig.clangd.setup {
-    init_options = {
-        clangdFileStatus = true
-    },
-    capabilities = capabilities,
-}
-
-lspconfig.rust_analyzer.setup {
-    capabilities = capabilities
-}
-
-lspconfig.pyright.setup {
-    capabilities = capabilities
-}
