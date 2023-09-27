@@ -1,57 +1,25 @@
-require 'formatter'.setup {
-    logging = false,
-    filetype = {
-        rust = {
-            -- Rustfmt
-            function()
-                return {
-                    exe = "rustfmt",
-                    args = {"--emit=stdout"},
-                    stdin = true
-                }
-            end
-        },
-        lua = {
-            -- luafmt
-            function()
-                return {
-                    exe = "luafmt",
-                    args = {"--indent-count", 2, "--stdin"},
-                    stdin = true
-                }
-            end
-        },
-        cpp = {
-            -- clang-format
-            function()
-                return {
-                exe = "clang-format",
-                args = {},
-                stdin = true,
-                cwd = vim.fn.expand('%:p:h')  -- Run clang-format in cwd of the file.
-            }
-            end
-        },
-        c = {
-            -- clang-format
-            function()
-                return {
-                exe = "clang-format",
-                args = {},
-                stdin = true,
-                cwd = vim.fn.expand('%:p:h')  -- Run clang-format in cwd of the file.
-            }
-            end
-        },
-        python = {
-            -- black
-            function()
-                return {
-                    exe = "black",
-                    args = { '-' },
-                    stdin = true,
-                }
-            end
-        }
-    }
-}
+require("formatter").setup({
+  logging = false,
+  filetype = {
+    rust = {
+      require("formatter.filetypes.rust").rustfmt,
+    },
+    lua = {
+      require("formatter.filetypes.lua").stylua,
+    },
+    cpp = {
+      require("formatter.filetypes.cpp").clangformat,
+    },
+    c = {
+      require("formatter.filetypes.c").clangformat,
+    },
+    python = {
+      require("formatter.filetypes.python").black,
+    },
+    ["*"] = {
+      -- "formatter.filetypes.any" defines default configurations for any
+      -- filetype
+      require("formatter.filetypes.any").remove_trailing_whitespace,
+    },
+  },
+})

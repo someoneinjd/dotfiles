@@ -14,11 +14,11 @@ This is my neovim configurations (pure lua)
 
 * Plugin Manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
 * LSP:
-    * Basic config: [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-    * Enhanced UI: [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
+    * Basic config:
+        * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+        * [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 * Diagnostic Info:
     * List for showing diagnostics: [trouble.nvim](https://github.com/folke/trouble.nvim)
-    * Diagnostics highlight groups: [lsp-colors.nvim](https://github.com/folke/lsp-colors.nvim)
 * Signature Help: [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim)
 * Completion: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 * Snippet: [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
@@ -26,27 +26,27 @@ This is my neovim configurations (pure lua)
 * File Explorer: [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
 * Syntax Highlighting: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * Autopairs: [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-* Terminal: [lspsaga.nvim](https://github.com/glepnir/lspsaga.nvim)
 * Format: [formatter.nvim](https://github.com/mhartington/formatter.nvim)
 * Statusline: [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 * LSP Status: [fidget.nvim](https://github.com/j-hui/fidget.nvim)
 * Bufferline: [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 * Colorscheme: [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+* Enhanced code navigation: [flash.nvim](https://github.com/folke/flash.nvim)
 
 ## Key Bingings
 
 | Key         | Action                                    |
 | ----------- | ----------------------------------------- |
 | Meta + e    | Toggle file explorer                      |
-| Meta + t    | Open terminal(floating)                   |
 | Meta + f    | Format code                               |
 | Meta + n    | Goto next tab                             |
 | Meta + p    | Goto previous tab                         |
 | Meta + d    | Close current tab/terminal                |
-| gh          | Show all references and declaration       |
-| gr          | Rename                                    |
-| ga          | Code Actions                              |
+| gd          | Goto declaration                          |
+| gr          | Show all reference                        |
 | K           | Hover                                     |
+| <F4>        | Code Actions                              |
+| <F2>        | Rename                                    |
 | Leader + xx | Show all diagnostic messages              |
 | Leader + ff | Search files                              |
 | Leader + fg | Live grep                                 |
@@ -56,8 +56,4 @@ This is my neovim configurations (pure lua)
 
 ![](../../../img/normal.png)
 
-![](../../../img/lsp-finder.png)
-
 ![](../../../img/compe.png)
-
-![](../../../img/term.png)
