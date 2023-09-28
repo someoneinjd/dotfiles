@@ -35,22 +35,23 @@ This is my neovim configurations (pure lua)
 
 ## Key Bingings
 
-| Key         | Action                                    |
-| ----------- | ----------------------------------------- |
-| Meta + e    | Toggle file explorer                      |
-| Meta + f    | Format code                               |
-| Meta + n    | Goto next tab                             |
-| Meta + p    | Goto previous tab                         |
-| Meta + d    | Close current tab/terminal                |
-| gd          | Goto declaration                          |
-| gr          | Show all reference                        |
-| K           | Hover                                     |
-| <F4>        | Code Actions                              |
-| <F2>        | Rename                                    |
-| Leader + xx | Show all diagnostic messages              |
-| Leader + ff | Search files                              |
-| Leader + fg | Live grep                                 |
-| Leader + fb | Search buffer                             |
+| Key          | Action                                    |
+| ------------ | ----------------------------------------- |
+| Meta + e     | Toggle file explorer                      |
+| Meta + f     | Format code                               |
+| Meta + `num` | Goto buffer `num`                         |
+| Meta + n     | Goto next tab                             |
+| Meta + p     | Goto previous tab                         |
+| Meta + d     | Close current buffer                      |
+| gd           | Goto declaration                          |
+| gr           | Show all reference                        |
+| K            | Hover                                     |
+| <F4>         | Code Actions                              |
+| <F2>         | Rename                                    |
+| Leader + xx  | Show all diagnostic messages              |
+| Leader + ff  | Search files                              |
+| Leader + fg  | Live grep                                 |
+| Leader + fb  | Search buffer                             |
 
 ## Screenshots
 
