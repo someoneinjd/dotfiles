@@ -89,12 +89,30 @@ return {
   {
     "akinsho/bufferline.nvim",
     init = function()
-      require("bufferline").setup({})
+      require("bufferline").setup({ options = { numbers = "ordinal" } })
     end,
     keys = {
-      { "<M-p>", "<CMD>BufferLineCyclePrev<CR>" },
-      { "<M-n>", "<CMD>BufferLineCycleNext<CR>" },
-      { "<M-d>", "<CMD>bwipe<CR>" },
+      { "<M-1>", "<CMD>BufferLineGoToBuffer 1<CR>" },
+      { "<M-2>", "<CMD>BufferLineGoToBuffer 2<CR>" },
+      { "<M-3>", "<CMD>BufferLineGoToBuffer 3<CR>" },
+      { "<M-4>", "<CMD>BufferLineGoToBuffer 4<CR>" },
+      { "<M-5>", "<CMD>BufferLineGoToBuffer 5<CR>" },
+      { "<M-6>", "<CMD>BufferLineGoToBuffer 6<CR>" },
+      { "<M-7>", "<CMD>BufferLineGoToBuffer 7<CR>" },
+      { "<M-8>", "<CMD>BufferLineGoToBuffer 8<CR>" },
+      { "<M-9>", "<CMD>BufferLineGoToBuffer 9<CR>" },
+      { "<M-d>", "<CMD>bdelete<CR>" },
+    },
+  },
+
+  {
+    "tiagovla/scope.nvim",
+    init = function()
+      require("scope").setup({})
+    end,
+    keys = {
+      { "<M-n>", "<CMD>tabnext<CR>" },
+      { "<M-p>", "<CMD>tabprevious<CR>" },
     },
   },
 
@@ -110,7 +128,17 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "c", "lua", "cpp", "rust", "bash", "cmake", "python", "markdown", "markdown_inline" },
+        ensure_installed = {
+          "c",
+          "lua",
+          "cpp",
+          "rust",
+          "bash",
+          "cmake",
+          "python",
+          "markdown",
+          "markdown_inline",
+        },
         sync_install = true,
         highlight = {
           enable = true,
