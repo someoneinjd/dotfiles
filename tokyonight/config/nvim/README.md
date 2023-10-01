@@ -32,6 +32,7 @@ This is my neovim configurations (pure lua)
 * Bufferline: [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 * Colorscheme: [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 * Enhanced code navigation: [flash.nvim](https://github.com/folke/flash.nvim)
+* Incremental LSP renaming: [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) 
 
 ## Key Bingings
 
@@ -43,11 +44,11 @@ This is my neovim configurations (pure lua)
 | Meta + n     | Goto next tab                             |
 | Meta + p     | Goto previous tab                         |
 | Meta + d     | Close current buffer                      |
+| Meta + r     | Rename                                    |
 | gd           | Goto declaration                          |
 | gr           | Show all reference                        |
 | K            | Hover                                     |
-| <F4>         | Code Actions                              |
-| <F2>         | Rename                                    |
+| ga           | Code Actions                              |
 | Leader + xx  | Show all diagnostic messages              |
 | Leader + ff  | Search files                              |
 | Leader + fg  | Live grep                                 |
