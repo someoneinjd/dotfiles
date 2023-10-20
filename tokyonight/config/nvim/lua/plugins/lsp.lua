@@ -174,8 +174,12 @@ return {
   {
     "ray-x/lsp_signature.nvim",
     event = "LspAttach",
-    config = function()
-      require("lsp_signature").setup({ hint_prefix = " " })
+    opts = { hint_prefix = " " },
+    config = function(_, opts)
+      local lsp_zero = require("lsp-zero")
+      lsp_zero.on_attach(function(_, bufnr)
+        require("lsp_signature").on_attach(opts, bufnr)
+      end)
     end,
   },
 
@@ -190,7 +194,7 @@ return {
     end,
     -- stylua: ignore
     keys = {
-      { "\\xx", function() require("trouble").open() end },
+      { "\\xx", function() require("trouble").toggle() end },
       { "gd", function() require("trouble").open("lsp_definitions") end },
       { "gi", function() require("trouble").open("lsp_implementations") end },
       { "gr", function() require("trouble").open("lsp_references") end },

@@ -20,6 +20,15 @@ vim.o.relativenumber = true
 vim.o.completeopt = "menuone,noselect"
 vim.o.pumheight = 20
 
+-- set indent to 2 for lua
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "lua",
+  callback = function()
+    vim.opt_local.shiftwidth = 2
+    vim.opt_local.tabstop = 2
+  end,
+})
+
 -- replace quickfix mean with trouble
 vim.api.nvim_create_autocmd("BufWinEnter", {
   pattern = "quickfix",
