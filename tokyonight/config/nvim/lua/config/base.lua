@@ -19,6 +19,8 @@ vim.o.cursorline = true
 vim.o.relativenumber = true
 vim.o.completeopt = "menuone,noselect"
 vim.o.pumheight = 20
+vim.o.foldmethod = "marker"
+vim.o.signcolumn = "yes"
 
 -- set indent to 2 for lua
 vim.api.nvim_create_autocmd("FileType", {

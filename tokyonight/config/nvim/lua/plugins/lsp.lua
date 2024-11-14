@@ -74,9 +74,9 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "luasnip" },
+          { name = "path" },
         }, {
           { name = "buffer" },
-          { name = "path" },
         }),
       })
 
@@ -123,7 +123,7 @@ return {
         require("lspconfig")[val].setup({
           on_attach = function(client, bufnr)
             if client.server_capabilities.inlayHintProvider then
-              vim.lsp.inlay_hint.enable(bufnr, true)
+              vim.lsp.inlay_hint.enable(true)
             end
           end,
         })
@@ -213,4 +213,16 @@ return {
       { "<M-r>", function() return ":IncRename " .. vim.fn.expand("<cword>") end, expr = true },
     },
   },
+
+  {
+    "hedyhli/outline.nvim",
+    lazy = true,
+    cmd = { "Outline", "OutlineOpen" },
+    keys = { -- Example mapping to toggle outline
+      { "<leader>o", "<cmd>Outline<CR>", desc = "Toggle outline" },
+    },
+    opts = {
+      -- Your setup opts here
+    },
+  }
 }
