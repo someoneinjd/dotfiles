@@ -16,12 +16,9 @@ This is my neovim configurations (pure lua)
 * LSP:
     * Basic config:
         * [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-        * [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim)
 * Diagnostic Info:
     * List for showing diagnostics: [trouble.nvim](https://github.com/folke/trouble.nvim)
-* Signature Help: [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim)
-* Completion: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-* Snippet: [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+* Completion: [blink.cmp](https://github.com/Saghen/blink.cmp)
 * Finder: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) 
 * File Explorer: [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
 * Syntax Highlighting: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
