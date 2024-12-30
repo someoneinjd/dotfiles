@@ -1,26 +1,26 @@
 vim.cmd("syntax on")
 vim.cmd("filetype indent on")
-vim.o.termguicolors = true
-vim.o.smarttab = true
-vim.o.swapfile = false
-vim.o.showmode = false
-vim.o.showtabline = 2
-vim.o.laststatus = 3
-vim.o.backup = false
-vim.o.writebackup = false
-vim.o.clipboard = "unnamedplus"
-vim.o.fileencoding = "utf-8"
-vim.o.smartindent = true
-vim.o.autoindent = true
-vim.o.tabstop = 4
-vim.o.expandtab = true
-vim.o.shiftwidth = 4
-vim.o.cursorline = true
-vim.o.relativenumber = true
-vim.o.completeopt = "menuone,noselect"
-vim.o.pumheight = 20
-vim.o.foldmethod = "marker"
-vim.o.signcolumn = "yes"
+vim.opt.termguicolors = true
+vim.opt.smarttab = true
+vim.opt.swapfile = false
+vim.opt.showmode = false
+vim.opt.showtabline = 2
+vim.opt.laststatus = 3
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.clipboard = "unnamedplus"
+vim.opt.fileencoding = "utf-8"
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.tabstop = 4
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.cursorline = true
+vim.opt.relativenumber = true
+vim.opt.completeopt = "menuone,noselect"
+vim.opt.pumheight = 20
+vim.opt.foldmethod = "marker"
+vim.opt.signcolumn = "yes"
 
 -- set indent to 2 for lua
 vim.api.nvim_create_autocmd("FileType", {
