@@ -90,7 +90,6 @@ return {
             vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
             vim.keymap.set("n", "[d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
             vim.keymap.set("n", "]d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
-            vim.keymap.set("n", "<M-r>", "<CMD>lua vim.lsp.buf.rename()<CR>", opts)
           end,
           capabilities = require("blink.cmp").get_lsp_capabilities(),
         })
@@ -143,22 +142,20 @@ return {
       { "nvim-tree/nvim-web-devicons" },
     },
     cmd = { "Trouble", "TroubleToggle" },
-    config = function()
-      require("trouble").setup({})
-    end,
+    opts = {},
     -- stylua: ignore
     keys = {
-      { "<localleader>xx", "<CMD>Trouble diagnostics toggle<CR>" },
-      { "<localleader>o", "<CMD>Trouble symbols toggle<CR>" }
+      { "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>" },
+      { "<leader>o", "<CMD>Trouble symbols toggle<CR>" }
     },
   },
 
   {
     "smjonas/inc-rename.nvim",
     cmd = "IncRename",
-    config = function()
-      require("inc_rename").setup({ input_buffer_type = "dressing" })
-    end,
+    opts = {
+      input_buffer_type = "dressing",
+    },
     -- stylua: ignore
     keys = {
       { "<M-r>", function() return ":IncRename " .. vim.fn.expand("<cword>") end, expr = true },

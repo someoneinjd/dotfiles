@@ -1,13 +1,21 @@
 return {
   {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make",
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
     dependencies = {
       { "nvim-lua/plenary.nvim" },
     },
+    config = function()
+      require("telescope").load_extension("fzf")
+    end,
     keys = {
-      { "\\ff", "<CMD>Telescope find_files<CR>" },
-      { "\\fg", "<CMD>Telescope live_grep<CR>" },
-      { "\\fb", "<CMD>Telescope buffers<CR>" },
+      { "<leader>ff", "<CMD>Telescope find_files<CR>" },
+      { "<leader>fg", "<CMD>Telescope live_grep<CR>" },
+      { "<leader>fb", "<CMD>Telescope buffers<CR>" },
     },
   },
 
@@ -40,6 +48,26 @@ return {
 
   {
     "nvimdev/indentmini.nvim",
-    opts = {}
+    opts = {},
+  },
+
+  {
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    opts = {},
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      signs = {
+        add = { text = "┃" },
+        change = { text = "┃" },
+        delete = { text = "_" },
+        topdelete = { text = "‾" },
+        changedelete = { text = "~" },
+        untracked = { text = "┃" },
+      },
+    },
   },
 }
