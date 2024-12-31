@@ -14,7 +14,11 @@ return {
   {
     "akinsho/bufferline.nvim",
     init = function()
-      require("bufferline").setup({ options = { numbers = "ordinal" } })
+      require("bufferline").setup({
+        options = {
+          numbers = "ordinal",
+        },
+      })
     end,
     keys = {
       { "<M-1>", "<CMD>BufferLineGoToBuffer 1<CR>" },
