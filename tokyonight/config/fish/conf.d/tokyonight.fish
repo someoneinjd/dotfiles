@@ -1,14 +1,14 @@
 # TokyoNight Color Palette
-set -l foreground c0caf5
-set -l selection 364A82
-set -l comment 565f89
-set -l red f7768e
-set -l orange ff9e64
-set -l yellow e0af68
-set -l green 9ece6a
-set -l purple 9d7cd8
-set -l cyan 7dcfff
-set -l pink bb9af7
+set -l foreground c8d3f5
+set -l selection 2d3f76
+set -l comment 636da6
+set -l red ff757f
+set -l orange ff966c
+set -l yellow ffc777
+set -l green c3e88d
+set -l purple fca7ea
+set -l cyan 86e1fc
+set -l pink c099ff
 
 # Syntax Highlighting Colors
 set -g fish_color_normal $foreground
@@ -17,6 +17,7 @@ set -g fish_color_keyword $pink
 set -g fish_color_quote $yellow
 set -g fish_color_redirection $foreground
 set -g fish_color_end $orange
+set -g fish_color_option $pink
 set -g fish_color_error $red
 set -g fish_color_param $purple
 set -g fish_color_comment $comment
@@ -31,4 +32,4 @@ set -g fish_pager_color_progress $comment
 set -g fish_pager_color_prefix $cyan
 set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
-
+set -g fish_pager_color_selected_background --background=$selection
