@@ -29,3 +29,8 @@ See [here](./config/nvim/)
 
 ## Screenshots
 
+![empty](https://github.com/user-attachments/assets/491c833b-4a54-4d96-9a0d-92c90d1984af)
+
+![all](https://github.com/user-attachments/assets/01914509-d362-4129-ac8b-5c72a8669863)
+
+![workspace](https://github.com/user-attachments/assets/cad93fa7-04c4-4c31-a6aa-068e97146db1)
