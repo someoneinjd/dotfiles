@@ -27,6 +27,8 @@ See [here](./config/nvim/)
 
 ## Neovim Screenshots
 
+![nvim](https://github.com/user-attachments/assets/a170f865-7929-4fc4-9842-c3302f4fe9b7)
+
 ## Screenshots
 
 ![empty](https://github.com/user-attachments/assets/491c833b-4a54-4d96-9a0d-92c90d1984af)
