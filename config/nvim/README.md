@@ -56,3 +56,5 @@
 | Leader + fb  | Search buffer                             |
 
 ## Screenshots
+
+![nvim](https://github.com/user-attachments/assets/a170f865-7929-4fc4-9842-c3302f4fe9b7)
