@@ -1,9 +1,18 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: NotoSans Nerd Font, sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
     min-height: 0;
+}
+
+#window {
+    background-color: #24283b;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    color: #9ece6a;
+    font-family: monospace;
 }
 
 window#waybar {
@@ -22,19 +31,19 @@ window#waybar {
     color: #c0caf5;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
     color: #24283b;
     background-color: #7aa2f7;
     border-radius: 5px;
 }
 
-#workspaces button:hover {
+#workspaces button.hover {
 	background-color: #7dcfff;
 	color: #24283b;
 	border-radius: 5px;
 }
 
-#custom-date, #clock, #tray, #battery, #pulseaudio, #network {
+#custom-date, #clock, #tray, #network {
 	background-color: #24283b;
 	padding: 5px 10px;
 	margin: 5px 0px;
@@ -70,25 +79,17 @@ window#waybar {
     margin-right: 10px;
 }
 
-#battery {
-    color: #9ece6a;
-}
-
-#battery.charging {
-    color: #9ece6a;
-}
-
-#battery.warning:not(.charging) {
-    background-color: #f7768e;
-    color: #24283b;
-    border-radius: 5px 5px 5px 5px;
-}
-
 #network {
 	color: #f7768e;
 	border-radius: 5px 0px 0px 5px;
 }
 
-#pulseaudio {
-	color: #e0af68;
+menu {
+	border-radius: 10px;
+	background: #161320;
+	color: #B5E8E0;
+}
+
+menuitem {
+	border-radius: 10px;
 }

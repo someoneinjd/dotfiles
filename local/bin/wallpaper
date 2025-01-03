@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+import json
+import os
+import sys
+import subprocess
+import logging
+from urllib3 import PoolManager
+
+BING_API_TEMPLATE = "https://global.bing.com/HPImageArchive.aspx?format=js&idx=0&n=9&pid=hp&FORM=BEHPTB&uhd=1&uhdwidth=3840&uhdheight=2160&setmkt={}&setlang=en"
+BING_URL = "https://cn.bing.com"
+BING_ROOT_DIR = f"{os.getenv("HOME")}/Pictures/Bing"
+
+logger = logging.getLogger(__name__)
+
+def run_command(command: str):
+    args = command.split()
+    result = subprocess.run(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout = result.stdout.decode()
+    stderr = result.stderr.decode()
+    if stdout:
+        print(stdout, end="")
+    if stderr:
+        print(stderr, end="", file=sys.stderr)
+
+def get_image_info(http: PoolManager, region: str):
+    logger.info(f"Fetch image info from {BING_API_TEMPLATE.format(region)}")
+    response = http.request("GET", BING_API_TEMPLATE.format(region))
+    info = json.loads(response.data)["images"][0]
+    return info["url"], info["copyright"]
+
+def download_image(http: PoolManager, url: str):
+    logger.info(f"Download image from {BING_URL}{url}")
+    response = http.request("GET", f"{BING_URL}{url}")
+    with open(f"{BING_ROOT_DIR}/wallpaper.jpg", "wb") as fp:
+        fp.write(response.data) 
+
+def set_wallpaper(image_path: str):
+    logger.info(f"Set wallpaper to {image_path}")
+    if os.getenv("XDG_CURRENT_DESKTOP") != "Hyprland":
+        raise OSError("This script is only for Hyprland")
+    run_command("hyprctl hyprpaper unload all")
+    run_command(f"hyprctl hyprpaper preload {image_path}")
+    run_command(f"hyprctl hyprpaper wallpaper DP-1,{image_path}")
+
+
+def main():
+    logging.basicConfig(level=logging.INFO)
+    http = PoolManager()
+    url, copyright = get_image_info(http, "zh-CN")
+    download_image(http, url)
+    with open(f"{BING_ROOT_DIR}/copyright.txt", "w") as fp:
+        fp.write(copyright)
+    set_wallpaper(f"{BING_ROOT_DIR}/wallpaper.jpg")
+
+if __name__ == "__main__":
+    main()

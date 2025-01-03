@@ -1,0 +1,3 @@
+patch:
+  "menu/page_size": 8
+  __include: rime_ice_suggestion:/
