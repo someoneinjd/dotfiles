@@ -1,14 +1,12 @@
 # Neovim Config
 
-This is my neovim configurations (pure lua)
-
 ## Guide for lua in neovim
 
-* [nvim-lua-guide](https://github.com/nanotee/nvim-lua-guide)
+* [nvim-lua-guide](https://neovim.io/doc/user/lua-guide.html#lua-guide)
 
 ## Other Configurations
 
-[here](https://github.com/someoneinjd/dotfiles-mac/tree/main/config/nvim) is my another nvim configuration (pure vimscript), and [here](../nvim-min/) is a minimal configuration without external dependencies.
+[here](../nvim-min/) is a minimal configuration without external dependencies.
 
 ## Plugins
 
@@ -30,6 +28,9 @@ This is my neovim configurations (pure lua)
 * Colorscheme: [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 * Enhanced code navigation: [flash.nvim](https://github.com/folke/flash.nvim)
 * Incremental LSP renaming: [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) 
+* Surround selection: [nvim-surround](https://github.com/kylechui/nvim-surround)
+* Git: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+* Colorizer: [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua)
 
 ## Key Bingings
 
@@ -41,18 +42,17 @@ This is my neovim configurations (pure lua)
 | Meta + n     | Goto next tab                             |
 | Meta + p     | Goto previous tab                         |
 | Meta + d     | Close current buffer                      |
+| [d           | Goto next diagnostic                      |
+| ]d           | Goto prev diagnostic                      |
 | Meta + r     | Rename                                    |
 | gd           | Goto declaration                          |
 | gr           | Show all reference                        |
 | K            | Hover                                     |
 | ga           | Code Actions                              |
 | Leader + xx  | Show all diagnostic messages              |
+| Leader + o   | Show all document symbols                 |
 | Leader + ff  | Search files                              |
 | Leader + fg  | Live grep                                 |
 | Leader + fb  | Search buffer                             |
 
 ## Screenshots
-
-![](../../../img/normal.png)
-
-![](../../../img/compe.png)
