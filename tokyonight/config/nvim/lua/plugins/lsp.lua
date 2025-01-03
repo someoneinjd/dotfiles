@@ -90,7 +90,7 @@ return {
         },
       })
 
-      for _, val in ipairs({ "rust_analyzer", "clangd", "pyright" }) do
+      for _, val in ipairs({ "rust_analyzer", "clangd", "pyright", "ruff" }) do
         require("lspconfig")[val].setup({
           on_attach = function(client, bufnr)
             if client.server_capabilities.inlayHintProvider then
@@ -132,7 +132,7 @@ return {
             require("formatter.filetypes.c").clangformat,
           },
           python = {
-            require("formatter.filetypes.python").black,
+            require("formatter.filetypes.python").ruff,
           },
           ["*"] = {
             -- "formatter.filetypes.any" defines default configurations for any
