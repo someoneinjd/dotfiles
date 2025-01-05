@@ -101,7 +101,6 @@ return {
             vim.keymap.set("n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
             vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
             vim.keymap.set("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opts)
-            vim.keymap.set("n", "gr", "<CMD>lua vim.lsp.buf.references()<CR>", opts)
             vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
             vim.keymap.set("n", "[d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
             vim.keymap.set("n", "]d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
@@ -160,20 +159,22 @@ return {
     opts = {},
     -- stylua: ignore
     keys = {
+      { "gr", "<CMD>Trouble lsp_references toggle<CR>" },
       { "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>" },
-      { "<leader>o", "<CMD>Trouble symbols toggle win.position=right<CR>" }
+      { "<leader>o", "<CMD>Trouble symbols toggle win.position=right<CR>" },
     },
   },
 
   {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    opts = {
-      input_buffer_type = "dressing",
-    },
-    -- stylua: ignore
+    "saecki/live-rename.nvim",
+    opts = {},
     keys = {
-      { "<M-r>", function() return ":IncRename " .. vim.fn.expand("<cword>") end, expr = true },
+      {
+        "<M-r>",
+        function()
+          require("live-rename").rename({ insert = true })
+        end,
+      },
     },
   },
 }
