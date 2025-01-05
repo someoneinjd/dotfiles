@@ -161,7 +161,7 @@ return {
     -- stylua: ignore
     keys = {
       { "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>" },
-      { "<leader>o", "<CMD>Trouble symbols toggle<CR>" }
+      { "<leader>o", "<CMD>Trouble symbols toggle win.position=right<CR>" }
     },
   },
 
