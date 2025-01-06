@@ -1,3 +1,4 @@
+promptToReturnFromSubprocess: false
 gui:
   nerdFontsVersion: "3"
   theme:
