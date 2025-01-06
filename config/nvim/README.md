@@ -42,18 +42,18 @@
 | Meta + n     | Goto next tab                             |
 | Meta + p     | Goto previous tab                         |
 | Meta + d     | Close current buffer                      |
-| [d           | Goto next diagnostic                      |
-| ]d           | Goto prev diagnostic                      |
+| ]d           | Goto next diagnostic                      |
+| [d           | Goto prev diagnostic                      |
 | Meta + r     | Rename                                    |
 | gd           | Goto declaration                          |
 | gr           | Show all reference                        |
 | K            | Hover                                     |
 | ga           | Code Actions                              |
-| Leader + d   | Show all diagnostic messages              |
+| Leader + xx  | Show all diagnostic messages              |
 | Leader + o   | Show all document symbols                 |
-| Leader + f   | Search files                              |
-| Leader + g   | Live grep                                 |
-| Leader + b   | Search buffer                             |
+| Leader + ff  | Search files                              |
+| Leader + fg  | Live grep                                 |
+| Leader + fb  | Search buffer                             |
 
 ## Screenshots
 

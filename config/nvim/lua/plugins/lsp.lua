@@ -102,8 +102,8 @@ return {
             vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
             vim.keymap.set("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opts)
             vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
-            vim.keymap.set("n", "[d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
-            vim.keymap.set("n", "]d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
+            vim.keymap.set("n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
+            vim.keymap.set("n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
           end,
           capabilities = require("blink.cmp").get_lsp_capabilities(),
         })
@@ -160,7 +160,7 @@ return {
     -- stylua: ignore
     keys = {
       { "gr", "<CMD>Trouble lsp_references toggle<CR>" },
-      { "<leader>d", "<CMD>Trouble diagnostics toggle<CR>" },
+      { "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>" },
       { "<leader>o", "<CMD>Trouble symbols toggle win.position=right<CR>" },
     },
   },
