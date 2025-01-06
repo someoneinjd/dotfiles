@@ -59,7 +59,7 @@ return {
 
   {
     "lewis6991/gitsigns.nvim",
-    event = "BufReadPre",
+    event = "User FilePost",
     opts = {
       signs = {
         add = { text = "┃" },
@@ -74,7 +74,7 @@ return {
 
   {
     "catgoose/nvim-colorizer.lua",
-    event = "BufReadPre",
+    event = "User FilePost",
     opts = {},
   },
 }
