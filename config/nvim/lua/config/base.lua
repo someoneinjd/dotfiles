@@ -31,20 +31,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- replace quickfix mean with trouble
-vim.api.nvim_create_autocmd("BufWinEnter", {
-  pattern = "quickfix",
-  callback = function()
-    local ok, trouble = pcall(require, "trouble")
-    if ok then
-      vim.defer_fn(function()
-        vim.cmd.cclose()
-        trouble.open([[quickfix]])
-      end, 0)
-    end
-  end,
-})
-
 -- Copy/Paste when using ssh on a remote server
 if vim.env.SSH_CONNECTION and pcall(require, "vim.ui.clipboard.osc52") then
   vim.g.clipboard = {

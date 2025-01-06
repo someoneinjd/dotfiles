@@ -49,11 +49,11 @@
 | gr           | Show all reference                        |
 | K            | Hover                                     |
 | ga           | Code Actions                              |
-| Leader + xx  | Show all diagnostic messages              |
+| Leader + d   | Show all diagnostic messages              |
 | Leader + o   | Show all document symbols                 |
-| Leader + ff  | Search files                              |
-| Leader + fg  | Live grep                                 |
-| Leader + fb  | Search buffer                             |
+| Leader + f   | Search files                              |
+| Leader + g   | Live grep                                 |
+| Leader + b   | Search buffer                             |
 
 ## Screenshots
 

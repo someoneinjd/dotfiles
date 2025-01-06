@@ -160,7 +160,7 @@ return {
     -- stylua: ignore
     keys = {
       { "gr", "<CMD>Trouble lsp_references toggle<CR>" },
-      { "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>" },
+      { "<leader>d", "<CMD>Trouble diagnostics toggle<CR>" },
       { "<leader>o", "<CMD>Trouble symbols toggle win.position=right<CR>" },
     },
   },

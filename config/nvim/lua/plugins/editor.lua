@@ -13,9 +13,9 @@ return {
       require("telescope").load_extension("fzf")
     end,
     keys = {
-      { "<leader>ff", "<CMD>Telescope find_files<CR>" },
-      { "<leader>fg", "<CMD>Telescope live_grep<CR>" },
-      { "<leader>fb", "<CMD>Telescope buffers<CR>" },
+      { "<leader>f", "<CMD>Telescope find_files<CR>" },
+      { "<leader>g", "<CMD>Telescope live_grep<CR>" },
+      { "<leader>b", "<CMD>Telescope buffers<CR>" },
     },
   },
 
