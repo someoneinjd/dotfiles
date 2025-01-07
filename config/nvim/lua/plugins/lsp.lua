@@ -51,9 +51,14 @@ return {
           window = { border = "rounded" },
         },
         list = {
-          selection = function(ctx)
-            return ctx.mode == "cmdline" and "auto_insert" or "preselect"
-          end,
+          selection = {
+            preselect = function(ctx)
+              return ctx.mode ~= "cmdline"
+            end,
+            auto_insert = function(ctx)
+              return ctx.mode == "cmdline"
+            end,
+          },
         },
         menu = {
           border = "rounded",
