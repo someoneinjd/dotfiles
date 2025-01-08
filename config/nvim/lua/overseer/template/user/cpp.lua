@@ -13,11 +13,12 @@ local tmpl = function(compiler, additional_args)
         },
       },
       builder = function(params)
-        local file = vim.fn.expand("%:p")
-        local exec_file = vim.fn.expand("%:p:r")
+        local file = vim.fn.expand("%")
+        local exec_file = vim.fn.expand("%:r")
         return {
           cmd = { compiler },
           args = vim.list_extend({ file, "-o", exec_file }, params.args),
+          cwd = vim.fn.expand("%:p:h"),
           components = { "open_output", "default" },
         }
       end,
@@ -26,11 +27,12 @@ local tmpl = function(compiler, additional_args)
     return {
       name = compiler .. " build",
       builder = function()
-        local file = vim.fn.expand("%:p")
-        local exec_file = vim.fn.expand("%:p:r")
+        local file = vim.fn.expand("%")
+        local exec_file = vim.fn.expand("%:r")
         return {
           cmd = { compiler },
           args = { file, "-o", exec_file },
+          cwd = vim.fn.expand("%:p:h"),
           components = { "open_output", "default" },
         }
       end,
