@@ -31,6 +31,7 @@
 * Surround selection: [nvim-surround](https://github.com/kylechui/nvim-surround)
 * Git: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 * Colorizer: [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua)
+* Task Manager: [overseer.nvim](https://github.com/stevearc/overseer.nvim)
 
 ## Key Bingings
 
@@ -51,6 +52,7 @@
 | ga           | Code Actions                              |
 | Leader + xx  | Show all diagnostic messages              |
 | Leader + o   | Show all document symbols                 |
+| Leader + r   | Run overseer task                         |
 | Leader + ff  | Search files                              |
 | Leader + fg  | Live grep                                 |
 | Leader + fb  | Search buffer                             |

@@ -42,7 +42,7 @@ return {
       { "S", mode = { "n", "o", "x" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
       { "r", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
-      { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+      { "<c-s>", mode = "c", function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
   },
 
@@ -73,7 +73,7 @@ return {
     keys = {
       {
         "]c",
-        mode = { "n" },
+        mode = "n",
         function()
           if vim.wo.diff then
             vim.cmd.normal({ "]c", bang = true })
@@ -84,7 +84,7 @@ return {
       },
       {
         "[c",
-        mode = { "n" },
+        mode = "n",
         function()
           if vim.wo.diff then
             vim.cmd.normal({ "[c", bang = true })
@@ -95,91 +95,91 @@ return {
       },
       {
         "<leader>hs",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").stage_hunk()
         end,
       },
       {
         "<leader>hr",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").reset_hunk()
         end,
       },
       {
         "<leader>hs",
-        mode = { "v" },
+        mode = "v",
         function()
           require("gitsigns").stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
         end,
       },
       {
         "<leader>hr",
-        mode = { "v" },
+        mode = "v",
         function()
           require("gitsigns").reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
         end,
       },
       {
         "<leader>hS",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").stage_buffer()
         end,
       },
       {
         "<leader>hR",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").reset_buffer()
         end,
       },
       {
         "<leader>hu",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").undo_stage_hunk()
         end,
       },
       {
         "<leader>hp",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").preview_hunk()
         end,
       },
       {
         "<leader>hb",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").blame_line({ full = true })
         end,
       },
       {
         "<leader>tb",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").toggle_current_line_blame()
         end,
       },
       {
         "<leader>td",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").toggle_deleted()
         end,
       },
       {
         "<leader>hd",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").diffthis()
         end,
       },
       {
         "<leader>hD",
-        mode = { "n" },
+        mode = "n",
         function()
           require("gitsigns").diffthis("~")
         end,
@@ -191,5 +191,19 @@ return {
     "catgoose/nvim-colorizer.lua",
     event = "User FilePost",
     opts = {},
+  },
+
+  {
+    "stevearc/overseer.nvim",
+    opts = {
+      templates = { "builtin", "user.cpp" },
+    },
+    keys = {
+      {
+        "<leader>r",
+        mode = "n",
+        "<CMD>OverseerRun<CR>",
+      },
+    },
   },
 }
