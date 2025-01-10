@@ -4,10 +4,6 @@
 
 * [nvim-lua-guide](https://neovim.io/doc/user/lua-guide.html#lua-guide)
 
-## Other Configurations
-
-[here](../nvim-min/) is a minimal configuration without external dependencies.
-
 ## Plugins
 
 * Plugin Manager: [lazy.nvim](https://github.com/folke/lazy.nvim)
@@ -27,7 +23,7 @@
 * Bufferline: [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
 * Colorscheme: [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 * Enhanced code navigation: [flash.nvim](https://github.com/folke/flash.nvim)
-* Incremental LSP renaming: [inc-rename.nvim](https://github.com/smjonas/inc-rename.nvim) 
+* Incremental LSP renaming: [live-rename.nvim](https://github.com/saecki/live-rename.nvim)
 * Surround selection: [nvim-surround](https://github.com/kylechui/nvim-surround)
 * Git: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 * Colorizer: [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua)
