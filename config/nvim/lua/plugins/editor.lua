@@ -35,7 +35,13 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = "NvimTreeToggle",
-    opts = {},
+    opts = {
+      renderer = {
+        root_folder_label = false,
+        highlight_git = true,
+        indent_markers = { enable = true },
+      },
+    },
     keys = { { "<M-e>", "<CMD>NvimTreeToggle<CR>" } },
   },
 
