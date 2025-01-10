@@ -4,5 +4,6 @@ if status is-interactive
     alias ls eza
     alias ll "eza -l"
     alias la "eza -la"
+    alias lg lazygit
     starship init fish | source
 end
