@@ -139,8 +139,7 @@ return {
             require("formatter.filetypes.python").ruff,
           },
           ["*"] = {
-            -- "formatter.filetypes.any" defines default configurations for any
-            -- filetype
+            -- remove trailing whitespace for any filetype
             require("formatter.filetypes.any").remove_trailing_whitespace,
           },
         },
@@ -162,7 +161,6 @@ return {
     },
     cmd = { "Trouble", "TroubleToggle" },
     opts = {},
-    -- stylua: ignore
     keys = {
       { "gr", "<CMD>Trouble lsp_references toggle<CR>" },
       { "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>" },

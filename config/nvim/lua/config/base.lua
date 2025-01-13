@@ -16,11 +16,14 @@ vim.opt.tabstop = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.cursorline = true
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.pumheight = 20
 vim.opt.foldmethod = "marker"
 vim.opt.signcolumn = "yes"
+
+vim.keymap.set("n", "<ESC>", "<CMD>nohlsearch<CR>")
 
 -- set indent to 2 for lua
 vim.api.nvim_create_autocmd("FileType", {

@@ -28,6 +28,7 @@
 * Git: [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
 * Colorizer: [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua)
 * Task Manager: [overseer.nvim](https://github.com/stevearc/overseer.nvim)
+* Enhanced Search: [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens)
 
 ## Key Bingings
 

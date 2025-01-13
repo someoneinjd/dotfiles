@@ -15,9 +15,4 @@ vim.g.mapleader = " "
 
 require("lazy").setup({
   spec = { { import = "plugins" } },
-  performance = {
-    cache = {
-      enabled = true,
-    },
-  },
 })
