@@ -1,7 +1,8 @@
 return {
   {
     "nvim-lualine/lualine.nvim",
-    config = function()
+    event = "VeryLazy",
+    opts = function()
       -- Eviline config for lualine
       -- Author: shadmansaleh
       -- Credit: glepnir
@@ -228,9 +229,7 @@ return {
         color = { fg = colors.blue },
         padding = { left = 1 },
       })
-
-      -- Now don't forget to initialize lualine
-      lualine.setup(config)
+      return config
     end,
   },
 }

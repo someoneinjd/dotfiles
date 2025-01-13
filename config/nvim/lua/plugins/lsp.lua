@@ -119,8 +119,8 @@ return {
   {
     "mhartington/formatter.nvim",
     cmd = "Format",
-    config = function()
-      require("formatter").setup({
+    opts = function()
+      return {
         logging = false,
         filetype = {
           rust = {
@@ -143,7 +143,7 @@ return {
             require("formatter.filetypes.any").remove_trailing_whitespace,
           },
         },
-      })
+      }
     end,
     keys = { { "<M-f>", "<CMD>Format<CR>" } },
   },

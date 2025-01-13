@@ -10,6 +10,7 @@ return {
 
   {
     "akinsho/bufferline.nvim",
+    event = "VeryLazy",
     init = function()
       require("bufferline").setup({
         options = {
