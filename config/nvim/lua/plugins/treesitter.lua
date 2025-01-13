@@ -1,8 +1,9 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    event = { "BufReadPost", "BufNewFile" },
     build = ":TSUpdate",
+    event = "User FilePost",
+    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     config = function()
       require("nvim-treesitter.configs").setup({
         ensure_installed = {
@@ -15,6 +16,9 @@ return {
           "python",
           "markdown",
           "markdown_inline",
+          "regex",
+          "vim",
+          "vimdoc",
         },
         sync_install = true,
         highlight = {
