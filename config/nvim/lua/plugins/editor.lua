@@ -216,7 +216,7 @@ return {
   {
     "stevearc/overseer.nvim",
     opts = {
-      templates = { "builtin", "user.cpp" },
+      templates = { "builtin", "user.cpp", "user.python" },
     },
     keys = {
       {
