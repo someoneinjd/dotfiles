@@ -93,7 +93,6 @@ return {
     keys = {
       {
         "]c",
-        mode = "n",
         function()
           if vim.wo.diff then
             vim.cmd.normal({ "]c", bang = true })
@@ -104,7 +103,6 @@ return {
       },
       {
         "[c",
-        mode = "n",
         function()
           if vim.wo.diff then
             vim.cmd.normal({ "[c", bang = true })
@@ -115,14 +113,12 @@ return {
       },
       {
         "<leader>hs",
-        mode = "n",
         function()
           require("gitsigns").stage_hunk()
         end,
       },
       {
         "<leader>hr",
-        mode = "n",
         function()
           require("gitsigns").reset_hunk()
         end,
@@ -143,63 +139,54 @@ return {
       },
       {
         "<leader>hS",
-        mode = "n",
         function()
           require("gitsigns").stage_buffer()
         end,
       },
       {
         "<leader>hR",
-        mode = "n",
         function()
           require("gitsigns").reset_buffer()
         end,
       },
       {
         "<leader>hu",
-        mode = "n",
         function()
           require("gitsigns").undo_stage_hunk()
         end,
       },
       {
         "<leader>hp",
-        mode = "n",
         function()
           require("gitsigns").preview_hunk()
         end,
       },
       {
         "<leader>hb",
-        mode = "n",
         function()
           require("gitsigns").blame_line({ full = true })
         end,
       },
       {
         "<leader>tb",
-        mode = "n",
         function()
           require("gitsigns").toggle_current_line_blame()
         end,
       },
       {
         "<leader>td",
-        mode = "n",
         function()
           require("gitsigns").toggle_deleted()
         end,
       },
       {
         "<leader>hd",
-        mode = "n",
         function()
           require("gitsigns").diffthis()
         end,
       },
       {
         "<leader>hD",
-        mode = "n",
         function()
           require("gitsigns").diffthis("~")
         end,
@@ -219,11 +206,7 @@ return {
       templates = { "builtin", "user.cpp", "user.python" },
     },
     keys = {
-      {
-        "<leader>r",
-        mode = "n",
-        "<CMD>OverseerRun<CR>",
-      },
+      { "<leader>r", "<CMD>OverseerRun<CR>" },
     },
   },
 }
