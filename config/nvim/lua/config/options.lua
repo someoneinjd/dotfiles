@@ -23,38 +23,6 @@ vim.opt.pumheight = 20
 vim.opt.foldmethod = "marker"
 vim.opt.signcolumn = "yes"
 
-vim.keymap.set("n", "<ESC>", "<CMD>nohlsearch<CR>")
-
--- set indent to 2 for lua
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "lua",
-  callback = function()
-    vim.opt_local.shiftwidth = 2
-    vim.opt_local.tabstop = 2
-  end,
-})
-
--- user event that loads after UIEnter + only if file buf is there
-vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
-  group = vim.api.nvim_create_augroup("MyFilePost", { clear = true }),
-  callback = function(args)
-    local file = vim.api.nvim_buf_get_name(args.buf)
-    local buftype = vim.api.nvim_get_option_value("buftype", { buf = args.buf })
-
-    if not vim.g.ui_entered and args.event == "UIEnter" then
-      vim.g.ui_entered = true
-    end
-
-    if file ~= "" and buftype ~= "nofile" and vim.g.ui_entered then
-      vim.api.nvim_exec_autocmds("User", { pattern = "FilePost", modeline = false })
-      vim.api.nvim_del_augroup_by_name("MyFilePost")
-      vim.schedule(function()
-        vim.api.nvim_exec_autocmds("FileType", {})
-      end)
-    end
-  end,
-})
-
 -- Copy/Paste when using ssh on a remote server
 if vim.env.SSH_CONNECTION and pcall(require, "vim.ui.clipboard.osc52") then
   vim.g.clipboard = {
