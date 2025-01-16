@@ -1,9 +1,9 @@
 {
-    "position": "top", 
+    "position": "top",
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["network", "custom/date", "clock", "custom/power", "tray"], 
+    "modules-right": ["network", "custom/date", "clock", "custom/power", "tray"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -32,6 +32,7 @@
     },
     "custom/date": {
         "format": "  {}",
+        "interval": 60,
         "exec": "$HOME/.local/bin/date.sh"
     },
     "custom/power": {
