@@ -81,22 +81,6 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "saghen/blink.cmp" },
     config = function()
-      vim.diagnostic.config({
-        virtual_text = {
-          prefix = "●", -- Could be '●', '▎', 'x', ■
-          spacing = 4,
-        },
-        float = { border = "rounded" },
-        signs = {
-          text = {
-            [vim.diagnostic.severity.ERROR] = "󰅚 ",
-            [vim.diagnostic.severity.WARN] = " ",
-            [vim.diagnostic.severity.INFO] = " ",
-            [vim.diagnostic.severity.HINT] = "",
-          },
-        },
-      })
-
       for _, val in ipairs({ "rust_analyzer", "clangd", "pyright", "ruff" }) do
         require("lspconfig")[val].setup({
           on_attach = function(client, bufnr)
@@ -109,8 +93,6 @@ return {
             vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
             vim.keymap.set("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opts)
             vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
-            vim.keymap.set("n", "]d", "<CMD>lua vim.diagnostic.goto_next()<CR>", opts)
-            vim.keymap.set("n", "[d", "<CMD>lua vim.diagnostic.goto_prev()<CR>", opts)
           end,
           capabilities = require("blink.cmp").get_lsp_capabilities(),
         })
