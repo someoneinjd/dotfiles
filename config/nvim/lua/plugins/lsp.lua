@@ -30,7 +30,9 @@ return {
           end,
           "fallback",
         },
-        cmdline = {
+      },
+      cmdline = {
+        keymap = {
           preset = "default",
           ["<Tab>"] = { "select_next", "fallback" },
           ["<S-Tab>"] = { "select_prev", "fallback" },
