@@ -37,6 +37,15 @@ return {
           ["<Tab>"] = { "select_next", "fallback" },
           ["<S-Tab>"] = { "select_prev", "fallback" },
         },
+        completion = {
+          list = {
+            selection = {
+              preselect = false,
+              auto_insert = true,
+            },
+          },
+          menu = { auto_show = true },
+        },
       },
       appearance = {
         use_nvim_cmp_as_default = false,
@@ -54,12 +63,8 @@ return {
         },
         list = {
           selection = {
-            preselect = function(ctx)
-              return ctx.mode ~= "cmdline"
-            end,
-            auto_insert = function(ctx)
-              return ctx.mode == "cmdline"
-            end,
+            preselect = true,
+            auto_insert = false,
           },
         },
         menu = {
