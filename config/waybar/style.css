@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: sans-serif;
+    font-family: sans-serif, "Symbols Nerd Font";
     font-size: 14px;
     min-height: 0;
 }
@@ -43,7 +43,7 @@ window#waybar {
 	border-radius: 5px;
 }
 
-#custom-date, #clock, #tray, #network {
+#custom-date, #clock, #tray, #battery, #pulseaudio, #network {
 	background-color: #24283b;
 	padding: 5px 10px;
 	margin: 5px 0px;
@@ -79,9 +79,27 @@ window#waybar {
     margin-right: 10px;
 }
 
+#battery {
+    color: #9ece6a;
+}
+
+#battery.charging {
+    color: #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f7768e;
+    color: #24283b;
+    border-radius: 5px 5px 5px 5px;
+}
+
 #network {
 	color: #f7768e;
 	border-radius: 5px 0px 0px 5px;
+}
+
+#pulseaudio {
+    color: #e0af68;
 }
 
 menu {
