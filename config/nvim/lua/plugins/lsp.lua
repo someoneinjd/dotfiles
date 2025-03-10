@@ -94,7 +94,7 @@ return {
             end
             local opts = { buffer = bufnr }
 
-            vim.keymap.set("n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
+            vim.keymap.set("n", "K", "<CMD>lua vim.lsp.buf.hover({ border = 'rounded' })<CR>", opts)
             vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
             vim.keymap.set("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opts)
             vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
