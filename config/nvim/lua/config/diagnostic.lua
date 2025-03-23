@@ -3,7 +3,6 @@ vim.diagnostic.config({
     prefix = "●", -- Could be '●', '▎', 'x', ■
     spacing = 4,
   },
-  float = { border = "rounded" },
   signs = {
     text = {
       [vim.diagnostic.severity.ERROR] = "󰅚 ",

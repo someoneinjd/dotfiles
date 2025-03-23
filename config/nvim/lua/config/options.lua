@@ -22,6 +22,7 @@ vim.opt.completeopt = "menuone,noselect"
 vim.opt.pumheight = 20
 vim.opt.foldmethod = "marker"
 vim.opt.signcolumn = "yes"
+vim.opt.winborder = "rounded"
 
 -- Copy/Paste when using ssh on a remote server
 if vim.env.SSH_CONNECTION and pcall(require, "vim.ui.clipboard.osc52") then

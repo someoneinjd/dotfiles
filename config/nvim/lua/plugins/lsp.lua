@@ -54,12 +54,11 @@ return {
       sources = {
         default = { "lsp", "path", "buffer" },
       },
-      signature = { enabled = true, window = { border = "rounded" } },
+      signature = { enabled = true },
       completion = {
         documentation = {
           auto_show = true,
           auto_show_delay_ms = 200,
-          window = { border = "rounded" },
         },
         list = {
           selection = {
@@ -68,7 +67,6 @@ return {
           },
         },
         menu = {
-          border = "rounded",
           draw = {
             columns = {
               { "label", "label_description", gap = 1 },
@@ -94,7 +92,7 @@ return {
             end
             local opts = { buffer = bufnr }
 
-            vim.keymap.set("n", "K", "<CMD>lua vim.lsp.buf.hover({ border = 'rounded' })<CR>", opts)
+            vim.keymap.set("n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
             vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
             vim.keymap.set("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opts)
             vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
