@@ -13,8 +13,8 @@
 * Diagnostic Info:
     * List for showing diagnostics: [trouble.nvim](https://github.com/folke/trouble.nvim)
 * Completion: [blink.cmp](https://github.com/Saghen/blink.cmp)
-* Finder: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) 
-* File Explorer: [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua)
+* Finder: [snacks.picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) 
+* File Explorer: [snacks.explorer](https://github.com/folke/snacks.nvim/blob/main/docs/explorer.md)
 * Syntax Highlighting: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * Autopairs: [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
 * Format: [formatter.nvim](https://github.com/mhartington/formatter.nvim)

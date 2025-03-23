@@ -1,51 +1,5 @@
 return {
   {
-    "nvim-telescope/telescope.nvim",
-    dependencies = {
-      { "nvim-lua/plenary.nvim" },
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make",
-      },
-    },
-    config = function(_, opts)
-      require("telescope").setup(opts)
-      require("telescope").load_extension("fzf")
-    end,
-    opts = {
-      defaults = {
-        prompt_prefix = "   ",
-        selection_caret = " ",
-        entry_prefix = " ",
-        sorting_strategy = "ascending",
-        layout_config = {
-          horizontal = {
-            prompt_position = "top",
-          },
-        },
-      },
-    },
-    keys = {
-      { "<leader>ff", "<CMD>Telescope find_files<CR>" },
-      { "<leader>fg", "<CMD>Telescope live_grep<CR>" },
-      { "<leader>fb", "<CMD>Telescope buffers<CR>" },
-    },
-  },
-
-  {
-    "nvim-tree/nvim-tree.lua",
-    cmd = "NvimTreeToggle",
-    opts = {
-      renderer = {
-        root_folder_label = false,
-        highlight_git = true,
-        indent_markers = { enable = true },
-      },
-    },
-    keys = { { "<M-e>", "<CMD>NvimTreeToggle<CR>" } },
-  },
-
-  {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     opts = {},
@@ -63,11 +17,6 @@ return {
       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
       { "<c-s>", mode = "c", function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
-  },
-
-  {
-    "nvimdev/indentmini.nvim",
-    opts = {},
   },
 
   {
