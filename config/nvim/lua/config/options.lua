@@ -20,7 +20,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.completeopt = "menuone,noselect"
 vim.opt.pumheight = 20
-vim.opt.foldmethod = "marker"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
 vim.opt.signcolumn = "yes"
 vim.opt.winborder = "rounded"
 
