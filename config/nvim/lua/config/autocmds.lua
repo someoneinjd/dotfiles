@@ -1,4 +1,4 @@
--- set indent to 2 for lua
+-- Set indent to 2 for lua
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "lua",
   callback = function()
@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- user event that loads after UIEnter + only if file buf is there
+-- User event that loads after UIEnter + only if file buf is there
 vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   group = vim.api.nvim_create_augroup("UserFilePost", { clear = true }),
   callback = function(args)
@@ -28,7 +28,7 @@ vim.api.nvim_create_autocmd({ "UIEnter", "BufReadPost", "BufNewFile" }, {
   end,
 })
 
--- go to last location when opening a buffer
+-- Go to last location when opening a buffer
 vim.api.nvim_create_autocmd("BufReadPost", {
   group = vim.api.nvim_create_augroup("UserLastLoc", { clear = true }),
   callback = function(event)
@@ -45,7 +45,7 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end,
 })
 
--- highlight on yank
+-- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("UserHighlightYank", { clear = true }),
   callback = function()
@@ -53,7 +53,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- pretty lsp progress notify
+-- Pretty lsp progress notify
 local progress = vim.defaulttable()
 vim.api.nvim_create_autocmd("LspProgress", {
   callback = function(ev)
@@ -96,7 +96,7 @@ vim.api.nvim_create_autocmd("LspProgress", {
   end,
 })
 
--- prefer LSP folding if client supports it
+-- Prefer LSP folding if client supports it
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)

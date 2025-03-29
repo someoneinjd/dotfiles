@@ -40,3 +40,19 @@ if vim.env.SSH_CONNECTION and pcall(require, "vim.ui.clipboard.osc52") then
     },
   }
 end
+
+-- Better diagnostic signs
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "●", -- Could be '●', '▎', 'x', ■
+    spacing = 4,
+  },
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "󰅚 ",
+      [vim.diagnostic.severity.WARN] = " ",
+      [vim.diagnostic.severity.INFO] = " ",
+      [vim.diagnostic.severity.HINT] = "",
+    },
+  },
+})
