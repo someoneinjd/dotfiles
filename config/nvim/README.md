@@ -17,7 +17,7 @@
 * File Explorer: [snacks.explorer](https://github.com/folke/snacks.nvim/blob/main/docs/explorer.md)
 * Syntax Highlighting: [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 * Autopairs: [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
-* Format: [formatter.nvim](https://github.com/mhartington/formatter.nvim)
+* Format: [conform.nvim](https://github.com/stevearc/conform.nvim)
 * Statusline: [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 * LSP Status: [snacks.notifier](https://github.com/folke/snacks.nvim/blob/main/docs/notifier.md)
 * Bufferline: [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)

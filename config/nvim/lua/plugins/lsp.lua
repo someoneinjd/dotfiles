@@ -104,35 +104,27 @@ return {
   },
 
   {
-    "mhartington/formatter.nvim",
-    cmd = "Format",
-    opts = function()
-      return {
-        logging = false,
-        filetype = {
-          rust = {
-            require("formatter.filetypes.rust").rustfmt,
-          },
-          lua = {
-            require("formatter.filetypes.lua").stylua,
-          },
-          cpp = {
-            require("formatter.filetypes.cpp").clangformat,
-          },
-          c = {
-            require("formatter.filetypes.c").clangformat,
-          },
-          python = {
-            require("formatter.filetypes.python").ruff,
-          },
-          ["*"] = {
-            -- remove trailing whitespace for any filetype
-            require("formatter.filetypes.any").remove_trailing_whitespace,
-          },
-        },
-      }
-    end,
-    keys = { { "<M-f>", "<CMD>Format<CR>" } },
+    "stevearc/conform.nvim",
+    cmd = "ConformInfo",
+    opts = {
+      formatters_by_ft = {
+        c = { "clang-format" },
+        cpp = { "clang-format" },
+        lua = { "stylua" },
+        python = { "ruff_format" },
+        rust = { "rustfmt", lsp_format = "fallback" },
+        ["*"] = { "trim_whitespace" },
+      },
+    },
+    keys = {
+      {
+        "<M-f>",
+        function()
+          require("conform").format()
+        end,
+        mode = { "n", "v" },
+      },
+    },
   },
 
   {
