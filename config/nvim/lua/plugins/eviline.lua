@@ -177,13 +177,18 @@ return {
           if next(clients) == nil then
             return msg
           end
+          local lsp_names = ""
           for _, client in ipairs(clients) do
             local filetypes = client.config.filetypes
             if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-              return client.name
+              if lsp_names == "" then
+                lsp_names = client.name
+              else
+                lsp_names = lsp_names .. ", " .. client.name
+              end
             end
           end
-          return msg
+          return lsp_names == "" and msg or lsp_names
         end,
         icon = " LSP:",
         color = { fg = colors.cyan, gui = "bold" },
