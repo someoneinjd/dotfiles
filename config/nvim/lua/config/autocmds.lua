@@ -96,7 +96,8 @@ vim.api.nvim_create_autocmd("LspProgress", {
   end,
 })
 
--- Prefer LSP folding if client supports it
+-- 1. Prefer LSP folding if client supports it.
+-- 2. Set lsp-related keymaps.
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = vim.lsp.get_client_by_id(args.data.client_id)
@@ -104,5 +105,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
       local win = vim.api.nvim_get_current_win()
       vim.wo[win][0].foldexpr = "v:lua.vim.lsp.foldexpr()"
     end
+    if client:supports_method("textDocument/inlayHint") then
+      vim.lsp.inlay_hint.enable(true)
+    end
+    local opts = { buffer = bufnr }
+
+    vim.keymap.set("n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
+    vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
   end,
 })

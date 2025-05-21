@@ -84,22 +84,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "saghen/blink.cmp" },
     config = function()
-      for _, val in ipairs({ "rust_analyzer", "clangd", "pyright", "ruff" }) do
-        require("lspconfig")[val].setup({
-          on_attach = function(client, bufnr)
-            if client.server_capabilities.inlayHintProvider then
-              vim.lsp.inlay_hint.enable(true)
-            end
-            local opts = { buffer = bufnr }
-
-            vim.keymap.set("n", "K", "<CMD>lua vim.lsp.buf.hover()<CR>", opts)
-            vim.keymap.set("n", "gd", "<CMD>lua vim.lsp.buf.definition()<CR>", opts)
-            vim.keymap.set("n", "gi", "<CMD>lua vim.lsp.buf.implementation()<CR>", opts)
-            vim.keymap.set("n", "ga", "<CMD>lua vim.lsp.buf.code_action()<CR>", opts)
-          end,
-          capabilities = require("blink.cmp").get_lsp_capabilities(),
-        })
-      end
+      vim.lsp.enable({ "rust_analyzer", "clangd", "pyright", "ruff" })
     end,
   },
 
@@ -136,6 +121,8 @@ return {
     opts = {},
     keys = {
       { "gr", "<CMD>Trouble lsp_references toggle<CR>" },
+      { "gd", "<CMD>Trouble lsp_definitions toggle<CR>" },
+      { "gi", "<CMD>Trouble lsp_implementations toggle<CR>" },
       { "<leader>xx", "<CMD>Trouble diagnostics toggle<CR>" },
       { "<leader>o", "<CMD>Trouble symbols toggle win.position=right<CR>" },
     },
