@@ -1,31 +1,35 @@
 return {
   {
     "saghen/blink.cmp",
-    build = "cargo build --release",
+    version = "*",
     event = { "InsertEnter", "CmdlineEnter" },
     opts = {
+      enabled = function()
+        return not vim.tbl_contains({ "prompt", "lsp:rename", "nofile" }, vim.bo.buftype) and vim.b.completion ~= false
+      end,
       keymap = {
         preset = "enter",
         ["<Tab>"] = {
+          "select_next",
+          "snippet_forward",
           function(cmp)
-            if cmp.is_visible() then
-              return cmp.select_next()
-            elseif cmp.snippet_active() then
-              return cmp.snippet_forward()
-            else
-              return false
+            local function has_words_before()
+              local line, col = (unpack or table.unpack)(vim.api.nvim_win_get_cursor(0))
+              return col ~= 0
+                and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+            end
+            if has_words_before() or vim.api.nvim_get_mode().mode == "c" then
+              return cmp.show()
             end
           end,
           "fallback",
         },
         ["<S-Tab>"] = {
+          "select_prev",
+          "snippet_backward",
           function(cmp)
-            if cmp.is_visible() then
-              return cmp.select_prev()
-            elseif cmp.snippet_active() then
-              return cmp.snippet_backward()
-            else
-              return false
+            if vim.api.nvim_get_mode().mode == "c" then
+              return cmp.show()
             end
           end,
           "fallback",
