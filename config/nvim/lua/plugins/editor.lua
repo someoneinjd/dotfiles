@@ -173,4 +173,10 @@ return {
       { "g#", "g#<CMD>lua require('hlslens').start()<CR>" },
     },
   },
+  {
+    "MeanderingProgrammer/render-markdown.nvim",
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    ft = "markdown",
+    opts = {},
+  },
 }
